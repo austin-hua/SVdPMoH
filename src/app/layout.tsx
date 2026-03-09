@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
+import Image from "next/image"
 import Link from "next/link"
 import { Video } from "lucide-react"
 import { MobileNav } from "@/components/mobile-nav"
@@ -97,44 +98,56 @@ export default function RootLayout({
       <body className={inter.className}>
         <header className="bg-white/95 backdrop-blur-sm shadow-sm sticky top-0 z-50">
           <nav
-            className="container mx-auto px-4 py-3 flex justify-between items-center"
+            className="container mx-auto px-4 py-2.5 flex justify-between items-center"
             aria-label="Main navigation"
           >
-            <Link href="/" className="flex items-center gap-2">
-              <span className="font-bold text-xl text-blue-800">DLBC</span>
-              <span className="hidden sm:inline text-sm text-gray-500 font-normal">
-                Maple Grove
-              </span>
+            <Link href="/" className="flex items-center gap-2.5">
+              <Image
+                src="/images/church-logo.png"
+                alt="Deeper Life Bible Church logo"
+                width={42}
+                height={42}
+                className="rounded-full"
+                priority
+              />
+              <div className="hidden sm:block leading-tight">
+                <span className="font-bold text-sm text-dlbc-navy block">
+                  DLBC
+                </span>
+                <span className="text-xs text-muted-foreground block">
+                  Maple Grove
+                </span>
+              </div>
             </Link>
 
             <div className="hidden md:flex items-center gap-6">
               <Link
                 href="/"
-                className="text-sm text-gray-700 hover:text-blue-800 transition-colors"
+                className="text-sm text-muted-foreground hover:text-dlbc-navy focus-visible:text-dlbc-navy transition-colors duration-200"
               >
                 Home
               </Link>
               <Link
                 href="/visit"
-                className="text-sm text-gray-700 hover:text-blue-800 transition-colors"
+                className="text-sm text-muted-foreground hover:text-dlbc-navy focus-visible:text-dlbc-navy transition-colors duration-200"
               >
                 Visit
               </Link>
               <Link
                 href="/give"
-                className="text-sm text-gray-700 hover:text-blue-800 transition-colors"
+                className="text-sm text-muted-foreground hover:text-dlbc-navy focus-visible:text-dlbc-navy transition-colors duration-200"
               >
                 Give
               </Link>
               <Link
                 href="/contact"
-                className="text-sm text-gray-700 hover:text-blue-800 transition-colors"
+                className="text-sm text-muted-foreground hover:text-dlbc-navy focus-visible:text-dlbc-navy transition-colors duration-200"
               >
                 Contact
               </Link>
               <Link
                 href="/resources"
-                className="text-sm text-gray-700 hover:text-blue-800 transition-colors"
+                className="text-sm text-muted-foreground hover:text-dlbc-navy focus-visible:text-dlbc-navy transition-colors duration-200"
               >
                 Resources
               </Link>
@@ -142,7 +155,7 @@ export default function RootLayout({
                 href={ZOOM_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ml-2 inline-flex items-center gap-2 px-4 py-2 bg-blue-800 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"
+                className="ml-2 inline-flex items-center gap-2 px-4 py-2 bg-dlbc-navy text-white rounded-lg hover:bg-dlbc-blue transition-colors duration-200 text-sm font-medium"
               >
                 <Video className="h-4 w-4" />
                 Join Online
@@ -154,7 +167,7 @@ export default function RootLayout({
                 href={ZOOM_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-800 text-white rounded-lg text-sm font-medium"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-dlbc-navy text-white rounded-lg text-sm font-medium"
               >
                 <Video className="h-3.5 w-3.5" />
                 Join
@@ -166,17 +179,28 @@ export default function RootLayout({
 
         <main>{children}</main>
 
-        <footer className="bg-gray-900 text-gray-300 py-12 mt-16">
+        <footer className="bg-dlbc-navy text-slate-300 py-12 mt-16">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-3 gap-8">
               <div>
-                <h3 className="text-white font-semibold text-lg mb-3">
-                  Deeper Life Bible Church
-                </h3>
-                <p className="text-sm text-gray-400">
-                  Maple Grove Headquarters Branch
-                </p>
-                <address className="text-sm mt-3 not-italic leading-relaxed">
+                <div className="flex items-center gap-3 mb-4">
+                  <Image
+                    src="/images/church-logo.png"
+                    alt=""
+                    width={36}
+                    height={36}
+                    className="rounded-full opacity-90"
+                  />
+                  <div>
+                    <h3 className="text-white font-semibold text-lg leading-tight">
+                      Deeper Life Bible Church
+                    </h3>
+                    <p className="text-sm text-slate-400">
+                      Maple Grove Headquarters Branch
+                    </p>
+                  </div>
+                </div>
+                <address className="text-sm not-italic leading-relaxed text-slate-400 pl-[48px]">
                   {CHURCH_ADDRESS_LINE1}
                   <br />
                   {CHURCH_ADDRESS_LINE2}
@@ -188,7 +212,7 @@ export default function RootLayout({
                 <h3 className="text-white font-semibold text-lg mb-3">
                   Service Times
                 </h3>
-                <div className="space-y-1 text-sm">
+                <div className="space-y-1.5 text-sm text-slate-400">
                   <p>Sunday: 9:00 AM – 1:00 PM</p>
                   <p>Wednesday: 6:00 PM – 8:00 PM</p>
                   <p>Friday: 6:00 PM – 8:00 PM</p>
@@ -204,25 +228,25 @@ export default function RootLayout({
                 >
                   <Link
                     href="/visit"
-                    className="hover:text-white transition-colors"
+                    className="text-slate-400 hover:text-white transition-colors duration-200"
                   >
                     Plan Your Visit
                   </Link>
                   <Link
                     href="/give"
-                    className="hover:text-white transition-colors"
+                    className="text-slate-400 hover:text-white transition-colors duration-200"
                   >
                     Give
                   </Link>
                   <Link
                     href="/contact"
-                    className="hover:text-white transition-colors"
+                    className="text-slate-400 hover:text-white transition-colors duration-200"
                   >
                     Contact Us
                   </Link>
                   <Link
                     href="/resources"
-                    className="hover:text-white transition-colors"
+                    className="text-slate-400 hover:text-white transition-colors duration-200"
                   >
                     Resources
                   </Link>
@@ -230,17 +254,20 @@ export default function RootLayout({
                     href={ZOOM_LINK}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-white transition-colors"
+                    className="text-slate-400 hover:text-white transition-colors duration-200"
                   >
                     Join Online Service
                   </a>
                 </nav>
               </div>
             </div>
-            <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-500">
-              <p>
+            <div className="border-t border-white/10 mt-8 pt-8 text-center text-sm text-slate-500">
+              <p className="mb-1">
                 &copy; {new Date().getFullYear()} Deeper Life Bible Church,
                 Maple Grove. All rights reserved.
+              </p>
+              <p className="text-xs text-slate-600 italic">
+                ...achieving heaven&apos;s goal
               </p>
             </div>
           </div>
