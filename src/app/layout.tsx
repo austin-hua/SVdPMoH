@@ -158,11 +158,20 @@ export default function RootLayout({
                   Our Parishes
                 </h3>
                 <ul className="space-y-1.5 text-sm text-slate-400">
-                  <li>St. James Catholic Church</li>
-                  <li>St. Anthony of Padua Catholic Church</li>
-                  <li>St. Philip Catholic Church</li>
-                  <li className="text-slate-500 text-xs pt-1">
-                    Catholic Diocese of Arlington
+                  <li>
+                    <a href="https://stjamescatholic.org/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                      St. James Catholic Church
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.stanthonyparish.org/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                      St. Anthony of Padua Catholic Church
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.stphilipfc.org/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                      St. Philip Catholic Church
+                    </a>
                   </li>
                 </ul>
               </div>

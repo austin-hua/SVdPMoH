@@ -11,8 +11,15 @@ import {
   Flower2,
   ChevronRight,
   Church,
+  ExternalLink,
 } from "lucide-react"
-import { PARISHES, DIOCESE } from "@/lib/constants"
+import { DIOCESE } from "@/lib/constants"
+
+const PARISH_LINKS = [
+  { name: "St. James Catholic Church", url: "https://stjamescatholic.org/" },
+  { name: "St. Anthony of Padua Catholic Church", url: "https://www.stanthonyparish.org/" },
+  { name: "St. Philip Catholic Church", url: "https://www.stphilipfc.org/" },
+]
 
 export default function Home() {
   return (
@@ -24,8 +31,8 @@ export default function Home() {
           <Image
             src="/images/svdplogo.jpg"
             alt="SVdP Mother of Hope Conference logo"
-            width={100}
-            height={100}
+            width={160}
+            height={160}
             className="mx-auto mb-6 rounded-full object-cover drop-shadow-lg animate-scale-in"
             priority
           />
@@ -87,16 +94,22 @@ export default function Home() {
             Three Falls Church parishes united in service to our neighbors in need.
           </p>
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {PARISHES.map((parish) => (
-              <div
-                key={parish}
-                className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 text-center border border-border"
+            {PARISH_LINKS.map(({ name, url }) => (
+              <a
+                key={name}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 text-center border border-border block cursor-pointer"
               >
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#1C3D5A]/5 text-[#2B5EA7] mb-4">
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#1C3D5A]/5 text-[#2B5EA7] mb-4 group-hover:bg-[#1C3D5A]/10 transition-colors">
                   <Church className="w-5 h-5" />
                 </div>
-                <h3 className="font-semibold text-base">{parish}</h3>
-              </div>
+                <h3 className="font-semibold text-base mb-2">{name}</h3>
+                <span className="inline-flex items-center gap-1 text-xs text-[#2B5EA7] group-hover:underline">
+                  Visit website <ExternalLink className="w-3 h-3" />
+                </span>
+              </a>
             ))}
           </div>
           <p className="text-center text-sm text-muted-foreground mt-6">
