@@ -3,13 +3,15 @@
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import Link from "next/link"
-import { ZOOM_LINK } from "@/lib/constants"
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/visit", label: "Visit" },
-  { href: "/give", label: "Give" },
-  { href: "/contact", label: "Contact" },
+  { href: "/request-help", label: "Request Help" },
+  { href: "/donate", label: "Donate" },
+  { href: "/volunteer", label: "Volunteer" },
+  { href: "/events", label: "Events" },
+  { href: "/about", label: "About SVdP" },
+  { href: "/spiritual-growth", label: "Spiritual Growth" },
   { href: "/resources", label: "Resources" },
 ]
 
@@ -20,7 +22,7 @@ export function MobileNav() {
     <>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="p-2 text-muted-foreground hover:text-dlbc-navy transition-colors duration-200"
+        className="p-2 text-muted-foreground hover:text-[#1C3D5A] transition-colors duration-200"
         aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
         aria-expanded={isOpen}
       >
@@ -43,21 +45,12 @@ export function MobileNav() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="block py-3 text-foreground/80 hover:text-dlbc-navy border-b border-border last:border-0 transition-colors duration-200"
+                  className="block py-3 text-foreground/80 hover:text-[#1C3D5A] border-b border-border last:border-0 transition-colors duration-200"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.label}
                 </Link>
               ))}
-              <a
-                href={ZOOM_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 mt-3 mb-2 py-3 px-4 bg-dlbc-navy text-white rounded-lg font-medium hover:bg-dlbc-blue transition-colors duration-200"
-                onClick={() => setIsOpen(false)}
-              >
-                Join Online Service
-              </a>
             </nav>
           </div>
         </>

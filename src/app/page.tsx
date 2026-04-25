@@ -2,161 +2,191 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import {
-  MapPin,
-  Clock,
-  Heart,
+  HandHeart,
+  HeartHandshake,
+  Users,
+  CalendarDays,
   BookOpen,
-  MessageCircle,
-  Video,
+  Link2,
+  Flower2,
   ChevronRight,
+  Church,
 } from "lucide-react"
-import { AddToCalendar } from "@/components/add-to-calendar"
-import { SERVICES, ZOOM_LINK } from "@/lib/constants"
+import { PARISHES, DIOCESE } from "@/lib/constants"
 
 export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-[#132B3F] via-dlbc-navy to-dlbc-blue text-white py-20 md:py-28 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-[#0f2233] via-[#1C3D5A] to-[#2B5EA7] text-white py-20 md:py-28 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(91,163,217,0.15),_transparent_60%)]" />
         <div className="container mx-auto px-4 text-center max-w-3xl relative">
           <Image
-            src="/images/church-logo.png"
-            alt=""
-            width={80}
-            height={80}
-            className="mx-auto mb-6 drop-shadow-lg animate-scale-in"
+            src="/images/svdplogo.jpg"
+            alt="SVdP Mother of Hope Conference logo"
+            width={100}
+            height={100}
+            className="mx-auto mb-6 rounded-full object-cover drop-shadow-lg animate-scale-in"
             priority
           />
-          <p className="text-dlbc-sky/80 text-sm font-medium tracking-widest uppercase mb-4 animate-fade-in-up">
-            Maple Grove Headquarters Branch
+          <p className="text-[#5BA3D9]/80 text-sm font-medium tracking-widest uppercase mb-4 animate-fade-in-up">
+            Falls Church, Virginia
           </p>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight animate-fade-in-up delay-100">
-            Deeper Life Bible Church
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight animate-fade-in-up delay-100">
+            Mother of Hope Conference
           </h1>
-          <p className="text-lg md:text-xl text-slate-300 mb-4 max-w-2xl mx-auto leading-relaxed animate-fade-in-up delay-200">
-            We&apos;re a warm community of believers growing deeper in
-            God&apos;s Word. Whether you join us in person at Maple Grove or
-            online, there&apos;s a place for you here.
+          <p className="text-lg text-slate-200 mb-2 animate-fade-in-up delay-200">
+            Society of St. Vincent de Paul
           </p>
-          <p className="text-slate-400 text-sm mb-8 flex items-center justify-center gap-1.5 animate-fade-in-up delay-300">
-            <MapPin className="h-4 w-4" />
-            Maple Grove Community Center, Maple Grove, MN
+          <p className="text-slate-300 text-base mb-8 max-w-2xl mx-auto leading-relaxed animate-fade-in-up delay-300">
+            Inspired by Gospel values, we serve Christ in the poor with love, respect, justice, and joy — uniting the faithful of three Falls Church parishes in service to our neighbors.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center animate-fade-in-up delay-400">
             <Button
               asChild
               size="lg"
-              className="bg-dlbc-gold hover:bg-dlbc-gold-light text-white font-semibold px-8 transition-all duration-200 hover:shadow-lg hover:shadow-dlbc-gold/20"
+              className="bg-white text-[#1C3D5A] hover:bg-slate-100 font-semibold px-8 transition-all duration-200"
             >
-              <Link href="/visit">Plan Your Visit</Link>
+              <Link href="/request-help">Request Assistance</Link>
             </Button>
             <Button
               asChild
               size="lg"
               variant="ghost"
-              className="border border-white/20 text-white bg-transparent hover:bg-white/10 hover:text-white px-8 transition-all duration-200"
+              className="border border-white/30 text-white bg-transparent hover:bg-white/10 hover:text-white px-8 transition-all duration-200"
             >
-              <a href={ZOOM_LINK} target="_blank" rel="noopener noreferrer">
-                <Video className="h-4 w-4 mr-2" />
-                Join Online
-              </a>
+              <Link href="/donate">
+                <HeartHandshake className="h-4 w-4 mr-2" />
+                Donate
+              </Link>
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Service Times */}
-      <section className="py-16 md:py-20 bg-secondary">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-3">Service Times</h2>
-          <p className="text-muted-foreground text-center mb-10 max-w-lg mx-auto">
-            Join us throughout the week for worship, Bible study, and prayer.
+      {/* Mission */}
+      <section className="py-14 md:py-18 bg-secondary">
+        <div className="container mx-auto px-4 max-w-3xl text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">Our Mission</h2>
+          <blockquote className="text-lg text-foreground/80 leading-relaxed italic border-l-4 border-[#2B5EA7] pl-6 text-left">
+            "To live the Gospel message by serving Christ in the poor with love,
+            respect, justice, and joy, and by growing in holiness through prayer,
+            reflection, and action."
+          </blockquote>
+          <p className="mt-6 text-muted-foreground leading-relaxed">
+            The Mother of Hope Conference is a newly established conference of the Society of St. Vincent de Paul, linking the communities of three Falls Church parishes under the {DIOCESE}.
           </p>
-          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {SERVICES.map((service) => (
-              <div
-                key={service.day}
-                className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 text-center"
-              >
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-dlbc-navy/5 text-dlbc-blue mb-4">
-                  <Clock className="w-5 h-5" />
-                </div>
-                <h3 className="font-semibold text-lg">{service.name}</h3>
-                <p className="text-muted-foreground text-sm mt-1">
-                  {service.description}
-                </p>
-                <p className="font-medium mt-3 text-dlbc-navy">
-                  {service.time}
-                </p>
-                <AddToCalendar
-                  title={`${service.name} – DLBC Maple Grove`}
-                  startDate={service.startDate}
-                  startTime={service.startTime}
-                  endTime={service.endTime}
-                  rruleDay={service.rruleDay}
-                  description={service.description}
-                />
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
-      {/* Get Connected */}
-      <section className="py-16 md:py-20">
+      {/* Parish Partnership */}
+      <section className="py-14 md:py-18">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-3">
-            Get Connected
-          </h2>
+          <h2 className="text-3xl font-bold text-center mb-3">Our Parish Partnership</h2>
+          <p className="text-muted-foreground text-center mb-10 max-w-lg mx-auto">
+            Three Falls Church parishes united in service to our neighbors in need.
+          </p>
+          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {PARISHES.map((parish) => (
+              <div
+                key={parish}
+                className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 text-center border border-border"
+              >
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#1C3D5A]/5 text-[#2B5EA7] mb-4">
+                  <Church className="w-5 h-5" />
+                </div>
+                <h3 className="font-semibold text-base">{parish}</h3>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-sm text-muted-foreground mt-6">
+            In partnership with the {DIOCESE}
+          </p>
+        </div>
+      </section>
+
+      {/* Quick Links */}
+      <section className="py-14 md:py-18 bg-secondary">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-3">How We Serve</h2>
           <p className="text-muted-foreground text-center mb-10">
-            There are many ways to be part of our church family.
+            Find the resources and opportunities that are right for you.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
-            <ActionCard
-              icon={<MapPin className="w-5 h-5" />}
-              title="Plan Your Visit"
-              desc="Find us, see service times, and know what to expect."
-              href="/visit"
+            <QuickLink
+              icon={<HandHeart className="w-5 h-5" />}
+              title="Request Help"
+              desc="Need assistance? We're here to help those in our parish boundaries."
+              href="/request-help"
             />
-            <ActionCard
-              icon={<Heart className="w-5 h-5" />}
-              title="Give"
-              desc="Support the mission and vision of our church."
-              href="/give"
+            <QuickLink
+              icon={<HeartHandshake className="w-5 h-5" />}
+              title="Donate"
+              desc="Support our work through financial gifts or material donations."
+              href="/donate"
             />
-            <ActionCard
-              icon={<MessageCircle className="w-5 h-5" />}
-              title="Prayer Request"
-              desc="Share your prayer needs with our church family."
-              href="/contact"
+            <QuickLink
+              icon={<Users className="w-5 h-5" />}
+              title="Volunteer"
+              desc="Join the Society and serve alongside fellow Vincentians."
+              href="/volunteer"
             />
-            <ActionCard
+            <QuickLink
+              icon={<CalendarDays className="w-5 h-5" />}
+              title="Events"
+              desc="See upcoming meetings, food drives, and fundraisers."
+              href="/events"
+            />
+            <QuickLink
               icon={<BookOpen className="w-5 h-5" />}
+              title="About SVdP"
+              desc="Learn about the history and mission of our Society."
+              href="/about"
+            />
+            <QuickLink
+              icon={<Flower2 className="w-5 h-5" />}
+              title="Spiritual Growth"
+              desc="Reflections and prayers for Vincentian members."
+              href="/spiritual-growth"
+            />
+            <QuickLink
+              icon={<Link2 className="w-5 h-5" />}
               title="Resources"
-              desc="Access Bible study materials and more."
+              desc="Local assistance directories and SVdP Council links."
               href="/resources"
             />
           </div>
         </div>
       </section>
 
-      {/* Closing CTA */}
-      <section className="py-16 md:py-20 bg-dlbc-navy text-white">
+      {/* Latest News placeholder */}
+      <section className="py-14 md:py-18">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-3xl font-bold mb-3">Latest News</h2>
+          <p className="text-muted-foreground mb-8">Updates from our conference.</p>
+          <div className="border rounded-xl p-8 text-center bg-secondary">
+            <p className="text-muted-foreground">
+              News and announcements will appear here. Check back soon!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-14 md:py-18 bg-[#1C3D5A] text-white">
         <div className="container mx-auto px-4 text-center max-w-2xl">
-          <h2 className="text-3xl font-bold mb-4">Join Us This Week</h2>
-          <p className="text-slate-300 mb-6 leading-relaxed">
-            Whether you&apos;re exploring faith for the first time or looking
-            for a church home, we&apos;d love to welcome you. Come as you are.
+          <h2 className="text-3xl font-bold mb-4">Join Us in Serving Our Neighbors</h2>
+          <p className="text-slate-300 mb-8 leading-relaxed">
+            Whether you need assistance, want to donate, or feel called to volunteer, the Mother of Hope Conference welcomes you.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Button
               asChild
               size="lg"
-              className="bg-dlbc-gold hover:bg-dlbc-gold-light text-white font-semibold transition-all duration-200"
+              className="bg-white text-[#1C3D5A] hover:bg-slate-100 font-semibold transition-all duration-200"
             >
-              <Link href="/visit">
-                Get Directions
+              <Link href="/volunteer">
+                Become a Vincentian
                 <ChevronRight className="h-4 w-4 ml-1" />
               </Link>
             </Button>
@@ -164,12 +194,9 @@ export default function Home() {
               asChild
               size="lg"
               variant="ghost"
-              className="border border-white/20 text-white bg-transparent hover:bg-white/10 hover:text-white transition-all duration-200"
+              className="border border-white/30 text-white bg-transparent hover:bg-white/10 hover:text-white transition-all duration-200"
             >
-              <a href={ZOOM_LINK} target="_blank" rel="noopener noreferrer">
-                <Video className="h-4 w-4 mr-2" />
-                Watch Online
-              </a>
+              <Link href="/contact">Contact Us</Link>
             </Button>
           </div>
         </div>
@@ -178,23 +205,26 @@ export default function Home() {
   )
 }
 
-interface ActionCardProps {
+function QuickLink({
+  icon,
+  title,
+  desc,
+  href,
+}: {
   icon: React.ReactNode
   title: string
   desc: string
   href: string
-}
-
-function ActionCard({ icon, title, desc, href }: ActionCardProps) {
+}) {
   return (
     <Link
       href={href}
       className="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 border border-border block"
     >
-      <div className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-dlbc-navy/5 text-dlbc-blue mb-4 group-hover:bg-dlbc-navy/10 transition-colors duration-200">
+      <div className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-[#1C3D5A]/5 text-[#2B5EA7] mb-4 group-hover:bg-[#1C3D5A]/10 transition-colors duration-200">
         {icon}
       </div>
-      <h3 className="font-semibold text-lg mb-1.5">{title}</h3>
+      <h3 className="font-semibold text-base mb-1.5">{title}</h3>
       <p className="text-muted-foreground text-sm leading-relaxed">{desc}</p>
     </Link>
   )

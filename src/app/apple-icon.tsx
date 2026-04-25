@@ -9,7 +9,7 @@ export default function AppleIcon() {
     (
       <div
         style={{
-          fontSize: 96,
+          fontSize: 56,
           background: "#1C3D5A",
           width: "100%",
           height: "100%",
@@ -19,9 +19,10 @@ export default function AppleIcon() {
           color: "white",
           fontWeight: 700,
           borderRadius: 32,
+          letterSpacing: 0,
         }}
       >
-        D
+        SVdP
       </div>
     ),
     { ...size }

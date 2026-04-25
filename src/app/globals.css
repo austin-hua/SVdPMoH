@@ -46,13 +46,11 @@
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
 
-  /* ── Brand Colors (derived from DLBC logo) ── */
-  --color-dlbc-navy: #1C3D5A;
-  --color-dlbc-blue: #3478B2;
-  --color-dlbc-sky: #5BA3D9;
-  --color-dlbc-red: #C53030;
-  --color-dlbc-gold: #D4920A;
-  --color-dlbc-gold-light: #F0B429;
+  /* ── SVdP Brand Colors ── */
+  --color-svdp-navy: #1C3D5A;
+  --color-svdp-blue: #2B5EA7;
+  --color-svdp-sky: #5BA3D9;
+  --color-svdp-gold: #C9A94A;
 }
 
 :root {

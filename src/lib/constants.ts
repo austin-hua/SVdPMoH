@@ -1,50 +1,29 @@
-export const CHURCH_NAME = "Deeper Life Bible Church"
-export const CHURCH_BRANCH = "Maple Grove Headquarters Branch"
-export const CHURCH_SHORT_NAME = "DLBC"
-export const CHURCH_LOCATION = "Maple Grove, MN"
+export const ORG_NAME = "Society of St. Vincent de Paul"
+export const CONFERENCE_NAME = "Mother of Hope Conference"
+export const ORG_SHORT = "SVdP"
+export const DIOCESE = "Catholic Diocese of Arlington"
 
-export const CHURCH_ADDRESS_LINE1 = "Maple Grove Community Center"
-export const CHURCH_ADDRESS_LINE2 = "12951 Weaver Lake Rd"
-export const CHURCH_ADDRESS_CITY = "Maple Grove, MN 55369"
-export const CHURCH_FULL_ADDRESS =
-  "Maple Grove Community Center, 12951 Weaver Lake Rd, Maple Grove, MN 55369"
-export const CHURCH_MAP_QUERY =
-  "Maple+Grove+Community+Center,+12951+Weaver+Lake+Rd,+Maple+Grove,+MN+55369"
-
-// TODO: Replace these with actual church contact info
-export const ZOOM_LINK = "#"
-export const CHURCH_EMAIL = "info@dlbcmaplegrove.org"
-export const CHURCH_PHONE = "(612) 555-0123"
-
-export const SERVICES = [
-  {
-    name: "Sunday Service",
-    day: "Sunday",
-    time: "9:00 AM – 1:00 PM",
-    startTime: "0900",
-    endTime: "1300",
-    rruleDay: "SU",
-    startDate: "20260301",
-    description: "Worship, prayer, and Bible teaching",
-  },
-  {
-    name: "Wednesday Bible Study",
-    day: "Wednesday",
-    time: "6:00 PM – 8:00 PM",
-    startTime: "1800",
-    endTime: "2000",
-    rruleDay: "WE",
-    startDate: "20260225",
-    description: "Mid-week Bible study and fellowship",
-  },
-  {
-    name: "Friday Revival Service",
-    day: "Friday",
-    time: "6:00 PM – 8:00 PM",
-    startTime: "1800",
-    endTime: "2000",
-    rruleDay: "FR",
-    startDate: "20260227",
-    description: "Revival service and prayer",
-  },
+export const PARISHES = [
+  "St. James Catholic Church",
+  "St. Anthony of Padua Catholic Church",
+  "St. Philip Catholic Church",
 ] as const
+
+export const CONFERENCE_PHONE = "703-111-1111"
+export const CONFERENCE_EMAIL = "temporary@svdpmotherofhope.org"
+export const CONFERENCE_ADDRESS_LINE1 = "905 Park Avenue"
+export const CONFERENCE_ADDRESS_CITY = "Falls Church, Virginia 22046"
+export const CONFERENCE_FULL_ADDRESS = "905 Park Avenue, Falls Church, Virginia 22046"
+export const CONFERENCE_MAP_QUERY = "905+Park+Avenue+Falls+Church+Virginia+22046"
+
+export const SVDP_NATIONAL_URL = "https://www.svdpusa.org"
+export const SVDP_COUNCIL_URL = "https://svdparlington.org"
+export const DIOCESE_URL = "https://www.arlingtondiocese.org"
+
+// Placeholder: replace with your actual Google Calendar embed src
+export const GOOGLE_CALENDAR_EMBED_SRC =
+  "https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_ID%40group.calendar.google.com&ctz=America%2FNew_York"
+
+// Assistance policy — update X with your actual dollar maximum
+export const ASSISTANCE_MAX = "$X"
+export const ASSISTANCE_FREQUENCY = "1–2 times per calendar year"

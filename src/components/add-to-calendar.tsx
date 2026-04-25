@@ -1,7 +1,7 @@
 "use client"
 
 import { Calendar, Download } from "lucide-react"
-import { CHURCH_FULL_ADDRESS } from "@/lib/constants"
+import { CONFERENCE_FULL_ADDRESS } from "@/lib/constants"
 
 interface AddToCalendarProps {
   title: string
@@ -20,7 +20,7 @@ export function AddToCalendar({
   rruleDay,
   description = "",
 }: AddToCalendarProps) {
-  const googleUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${startDate}T${startTime}00/${startDate}T${endTime}00&ctz=America/Chicago&recur=RRULE:FREQ%3DWEEKLY;BYDAY%3D${rruleDay}&location=${encodeURIComponent(CHURCH_FULL_ADDRESS)}&details=${encodeURIComponent(description)}`
+  const googleUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${startDate}T${startTime}00/${startDate}T${endTime}00&ctz=America/Chicago&recur=RRULE:FREQ%3DWEEKLY;BYDAY%3D${rruleDay}&location=${encodeURIComponent(CONFERENCE_FULL_ADDRESS)}&details=${encodeURIComponent(description)}`
 
   function handleIcsDownload() {
     const icsContent = [
@@ -32,7 +32,7 @@ export function AddToCalendar({
       `DTEND;TZID=America/Chicago:${startDate}T${endTime}00`,
       `RRULE:FREQ=WEEKLY;BYDAY=${rruleDay}`,
       `SUMMARY:${title}`,
-      `LOCATION:${CHURCH_FULL_ADDRESS.replace(/,/g, "\\,")}`,
+      `LOCATION:${CONFERENCE_FULL_ADDRESS.replace(/,/g, "\\,")}`,
       `DESCRIPTION:${description.replace(/,/g, "\\,")}`,
       "END:VEVENT",
       "END:VCALENDAR",
