@@ -2,12 +2,12 @@
 
 import type { Metadata } from "next"
 import { useState, type FormEvent } from "react"
-import { AlertCircle, CheckCircle, Send } from "lucide-react"
+import { CheckCircle, Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { CONFERENCE_EMAIL, PARISHES, ASSISTANCE_MAX, ASSISTANCE_FREQUENCY } from "@/lib/constants"
+import { CONFERENCE_EMAIL, PARISHES } from "@/lib/constants"
 
 export default function RequestHelp() {
   const [submitted, setSubmitted] = useState(false)
@@ -35,38 +35,8 @@ export default function RequestHelp() {
       <div className="text-center mb-10">
         <h1 className="text-4xl font-bold mb-3">Request Assistance</h1>
         <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-          We are here to help. Please read the guidelines below before submitting your request.
+          We are here to help. Please fill out the form below and we will follow up with you.
         </p>
-      </div>
-
-      {/* Rules */}
-      <div className="bg-[#1C3D5A]/5 border border-[#1C3D5A]/20 rounded-xl p-6 mb-10 space-y-4">
-        <div className="flex items-start gap-3">
-          <AlertCircle className="h-5 w-5 text-[#2B5EA7] shrink-0 mt-0.5" />
-          <div>
-            <h2 className="font-semibold text-[#1C3D5A] mb-2">Assistance Guidelines</h2>
-            <ul className="space-y-2 text-sm text-foreground/80">
-              <li className="flex items-start gap-2">
-                <span className="text-[#2B5EA7] font-bold shrink-0">1.</span>
-                <span>
-                  <strong>Parish boundaries:</strong> We serve individuals and families who reside within the boundaries of St. James, St. Anthony of Padua, or St. Philip Catholic Church in the Falls Church area.
-                </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-[#2B5EA7] font-bold shrink-0">2.</span>
-                <span>
-                  <strong>Frequency:</strong> Financial assistance is provided {ASSISTANCE_FREQUENCY} per household.
-                </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-[#2B5EA7] font-bold shrink-0">3.</span>
-                <span>
-                  <strong>Maximum amount:</strong> Financial assistance is limited to a maximum of {ASSISTANCE_MAX} per request.
-                </span>
-              </li>
-            </ul>
-          </div>
-        </div>
       </div>
 
       {submitted ? (
@@ -129,22 +99,6 @@ export default function RequestHelp() {
               placeholder="Please briefly describe your situation and the type of assistance you are seeking…"
               className="mt-1.5"
             />
-          </div>
-
-          <div className="space-y-3 pt-2 border-t">
-            <p className="text-sm font-medium text-foreground">Please confirm you understand the following:</p>
-            <label className="flex items-start gap-2 cursor-pointer">
-              <input type="checkbox" required className="mt-0.5 h-4 w-4 rounded border-input" />
-              <span className="text-sm text-muted-foreground">
-                I reside within the boundaries of one of the three partner parishes in Falls Church.
-              </span>
-            </label>
-            <label className="flex items-start gap-2 cursor-pointer">
-              <input type="checkbox" required className="mt-0.5 h-4 w-4 rounded border-input" />
-              <span className="text-sm text-muted-foreground">
-                I understand that financial assistance is limited to {ASSISTANCE_FREQUENCY} and a maximum of {ASSISTANCE_MAX} per request.
-              </span>
-            </label>
           </div>
 
           <Button type="submit" className="w-full bg-[#1C3D5A] hover:bg-[#2B5EA7]">
