@@ -60,6 +60,17 @@ export default function Home() {
               variant="ghost"
               className="border border-white/30 text-white bg-transparent hover:bg-white/10 hover:text-white px-8 transition-all duration-200"
             >
+              <Link href="/volunteer">
+                <Users className="h-4 w-4 mr-2" />
+                Volunteer
+              </Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="ghost"
+              className="border border-white/30 text-white bg-transparent hover:bg-white/10 hover:text-white px-8 transition-all duration-200"
+            >
               <Link href="/donate">
                 <HeartHandshake className="h-4 w-4 mr-2" />
                 Donate
