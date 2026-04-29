@@ -10,8 +10,9 @@ import {
   ChevronRight,
   Church,
   ExternalLink,
+  Phone,
 } from "lucide-react"
-import { DIOCESE } from "@/lib/constants"
+import { DIOCESE, CONFERENCE_PHONE } from "@/lib/constants"
 
 const PARISH_LINKS = [
   { name: "St. James Catholic Church", url: "https://stjamescatholic.org/" },
@@ -46,7 +47,7 @@ export default function Home() {
           <p className="text-slate-300 text-base mb-8 max-w-2xl mx-auto leading-relaxed animate-fade-in-up delay-300">
             Inspired by Gospel values, we serve Christ in the poor with love, respect, justice, and joy — uniting the faithful of three Falls Church parishes in service to our neighbors.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center animate-fade-in-up delay-400">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center animate-fade-in-up delay-400 mb-6">
             <Button
               asChild
               size="lg"
@@ -77,6 +78,10 @@ export default function Home() {
               </Link>
             </Button>
           </div>
+          <p className="animate-fade-in-up delay-500 text-slate-200 text-base">
+            <Phone className="inline h-4 w-4 mr-1.5 mb-0.5" />
+            Call us: <a href={`tel:${CONFERENCE_PHONE.replace(/[^\d]/g, "")}`} className="font-semibold underline underline-offset-2 hover:text-white transition-colors">{CONFERENCE_PHONE}</a>
+          </p>
         </div>
       </section>
 
