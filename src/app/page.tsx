@@ -5,9 +5,7 @@ import {
   HandHeart,
   HeartHandshake,
   Users,
-  CalendarDays,
   BookOpen,
-  Link2,
   Flower2,
   ChevronRight,
   Church,
@@ -145,12 +143,6 @@ export default function Home() {
               href="/volunteer"
             />
             <QuickLink
-              icon={<CalendarDays className="w-5 h-5" />}
-              title="Events"
-              desc="See upcoming meetings, food drives, and fundraisers."
-              href="/events"
-            />
-            <QuickLink
               icon={<BookOpen className="w-5 h-5" />}
               title="About SVdP"
               desc="Learn about the history and mission of our Society."
@@ -161,12 +153,6 @@ export default function Home() {
               title="Spiritual Growth"
               desc="Reflections and prayers for Vincentian members."
               href="/spiritual-growth"
-            />
-            <QuickLink
-              icon={<Link2 className="w-5 h-5" />}
-              title="Resources"
-              desc="Local assistance directories and SVdP Council links."
-              href="/resources"
             />
           </div>
         </div>

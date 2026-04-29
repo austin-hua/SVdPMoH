@@ -50,10 +50,8 @@ const navLinks = [
   { href: "/request-help", label: "Request Help" },
   { href: "/donate", label: "Donate" },
   { href: "/volunteer", label: "Volunteer" },
-  { href: "/events", label: "Events" },
   { href: "/about", label: "About SVdP" },
   { href: "/spiritual-growth", label: "Spiritual Growth" },
-  { href: "/resources", label: "Resources" },
 ]
 
 export default function RootLayout({
@@ -193,14 +191,11 @@ export default function RootLayout({
                   <Link href="/volunteer" className="text-slate-400 hover:text-white transition-colors duration-200">
                     Volunteer
                   </Link>
-                  <Link href="/events" className="text-slate-400 hover:text-white transition-colors duration-200">
-                    Events Calendar
-                  </Link>
                   <Link href="/about" className="text-slate-400 hover:text-white transition-colors duration-200">
                     About SVdP
                   </Link>
-                  <Link href="/resources" className="text-slate-400 hover:text-white transition-colors duration-200">
-                    Resources
+                  <Link href="/spiritual-growth" className="text-slate-400 hover:text-white transition-colors duration-200">
+                    Spiritual Growth
                   </Link>
                 </nav>
               </div>

@@ -9,10 +9,8 @@ const navLinks = [
   { href: "/request-help", label: "Request Help" },
   { href: "/donate", label: "Donate" },
   { href: "/volunteer", label: "Volunteer" },
-  { href: "/events", label: "Events" },
   { href: "/about", label: "About SVdP" },
   { href: "/spiritual-growth", label: "Spiritual Growth" },
-  { href: "/resources", label: "Resources" },
 ]
 
 export function MobileNav() {
