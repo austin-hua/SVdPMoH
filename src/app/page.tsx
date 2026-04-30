@@ -179,9 +179,13 @@ export default function Home() {
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-3xl font-bold mb-3">Latest News</h2>
           <p className="text-muted-foreground mb-8">Updates from our conference.</p>
-          <div className="border rounded-xl p-8 text-center bg-secondary">
-            <p className="text-muted-foreground">
-              News and announcements will appear here. Check back soon!
+          <div className="border rounded-xl p-6 bg-white hover:shadow-sm transition-shadow duration-200">
+            <p className="text-xs text-muted-foreground uppercase tracking-wide mb-2">April 2026</p>
+            <h3 className="font-semibold text-lg text-[#1C3D5A] mb-2">
+              Mother of Hope Conference Officially Established
+            </h3>
+            <p className="text-foreground/80 leading-relaxed">
+              We are pleased to announce that the Society of St. Vincent de Paul Mother of Hope Conference is now officially established in the Commonwealth of Virginia and registered as a nonprofit organization under Section 501(c)(3) of the Internal Revenue Code, effective April 2026. We are also pleased to share that our Conference President and Treasurer have both been elected, marking an important milestone as we begin our work in earnest. We look forward to serving our neighbors in the Falls Church community and growing in the Vincentian spirit of charity.
             </p>
           </div>
         </div>
