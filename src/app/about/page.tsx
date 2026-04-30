@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import { BookOpen, Church, Globe } from "lucide-react"
 import { PARISHES, DIOCESE, SVDP_NATIONAL_URL, SVDP_COUNCIL_URL } from "@/lib/constants"
 
@@ -24,13 +25,22 @@ export default function About() {
           <BookOpen className="h-5 w-5 text-[#2B5EA7]" />
           History of the Society
         </h2>
-        <div className="space-y-4 text-foreground/80 leading-relaxed">
-          <p>
-            <strong>St. Vincent de Paul</strong> (1581–1660) was a French Catholic priest who dedicated his life to serving the poor and marginalized of seventeenth-century France. He founded the Congregation of the Mission (the Vincentians) and, with St. Louise de Marillac, the Daughters of Charity — pioneering organized charitable service in the Catholic Church.
-          </p>
+        <div className="space-y-4 text-foreground/80 leading-relaxed mb-8">
           <p>
             <strong>Blessed Frédéric Ozanam</strong> (1813–1853) was a young student in Paris who, challenged by a classmate to prove that the Church still cared for the poor, gathered a small group of university students in 1833 to begin visiting and serving the destitute of Paris. They named their fledgling Society after St. Vincent de Paul, whose spirit of humble, direct service inspired them.
           </p>
+        </div>
+        <div className="max-w-xl mx-auto rounded-2xl overflow-hidden shadow-md mb-8">
+          <Image
+            src="/images/frederic.png"
+            alt="Blessed Frédéric Ozanam"
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="w-full h-auto"
+          />
+        </div>
+        <div className="space-y-4 text-foreground/80 leading-relaxed">
           <p>
             From those humble beginnings, the Society of St. Vincent de Paul has grown into one of the largest lay Catholic charitable organizations in the world, operating in more than 150 countries and serving millions of people each year through direct, person-to-person service — always neighbor to neighbor.
           </p>
@@ -42,13 +52,27 @@ export default function About() {
 
       {/* The Vincentian Mission */}
       <section className="mb-14 bg-[#1C3D5A]/5 rounded-xl p-8">
-        <h2 className="text-2xl font-semibold mb-4 text-[#1C3D5A]">The Vincentian Mission</h2>
-        <blockquote className="text-lg italic text-foreground/80 border-l-4 border-[#2B5EA7] pl-5 mb-4">
-          "Inspired by Gospel values, the Society of Saint Vincent de Paul, a Catholic lay organization, leads women and men to join together to grow spiritually by offering person-to-person service to those who are needy and suffering."
-        </blockquote>
-        <p className="text-sm text-muted-foreground">
-          — Mission Statement of the Society of St. Vincent de Paul USA
-        </p>
+        <div className="flex flex-col sm:flex-row gap-8 items-center">
+          <div className="rounded-xl overflow-hidden shadow-md shrink-0 sm:w-48">
+            <Image
+              src="/images/saintvincent.png"
+              alt="St. Vincent de Paul"
+              width={0}
+              height={0}
+              sizes="200px"
+              className="w-full h-auto"
+            />
+          </div>
+          <div>
+            <h2 className="text-2xl font-semibold mb-4 text-[#1C3D5A]">The Vincentian Mission</h2>
+            <blockquote className="text-lg italic text-foreground/80 border-l-4 border-[#2B5EA7] pl-5 mb-4">
+              "Inspired by Gospel values, the Society of Saint Vincent de Paul, a Catholic lay organization, leads women and men to join together to grow spiritually by offering person-to-person service to those who are needy and suffering."
+            </blockquote>
+            <p className="text-sm text-muted-foreground">
+              — Mission Statement of the Society of St. Vincent de Paul USA
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* Our Local Conference */}
