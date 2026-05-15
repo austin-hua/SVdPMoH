@@ -132,8 +132,29 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Quick Links */}
+      {/* Map */}
       <section className="py-14 md:py-18 bg-secondary">
+        <div className="container mx-auto px-4 max-w-4xl text-center">
+          <h2 className="text-3xl font-bold mb-3">Where We Serve</h2>
+          <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
+            Our conference serves the Falls Church, Virginia community.
+          </p>
+          <div className="rounded-xl overflow-hidden shadow-md border border-border">
+            <iframe
+              title="Falls Church, Virginia map"
+              src="https://maps.google.com/maps?q=Falls+Church,+Virginia&output=embed&hl=en&z=13"
+              width="100%"
+              height="400"
+              style={{ border: 0, display: "block" }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Links */}
+      <section className="py-14 md:py-18">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-3">How We Serve</h2>
           <p className="text-muted-foreground text-center mb-10">
