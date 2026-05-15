@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
@@ -13,6 +15,7 @@ import {
   Phone,
 } from "lucide-react"
 import { DIOCESE, CONFERENCE_PHONE } from "@/lib/constants"
+import { useLanguage } from "@/components/language-provider"
 
 const PARISH_LINKS = [
   { name: "St. James Catholic Church", url: "https://stjamescatholic.org/" },
@@ -21,6 +24,9 @@ const PARISH_LINKS = [
 ]
 
 export default function Home() {
+  const { t } = useLanguage()
+  const h = t.home
+
   return (
     <div>
       {/* Hero */}
@@ -36,16 +42,14 @@ export default function Home() {
             priority
           />
           <p className="text-[#5BA3D9]/80 text-sm font-medium tracking-widest uppercase mb-4 animate-fade-in-up">
-            Falls Church, Virginia
+            {h.heroLocation}
           </p>
           <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight animate-fade-in-up delay-100">
-            Mother of Hope Conference
+            {h.heroTitle}
           </h1>
-          <p className="text-lg text-slate-200 mb-2 animate-fade-in-up delay-200">
-            Society of St. Vincent de Paul
-          </p>
+          <p className="text-lg text-slate-200 mb-2 animate-fade-in-up delay-200">{h.heroOrg}</p>
           <p className="text-slate-300 text-base mb-8 max-w-2xl mx-auto leading-relaxed animate-fade-in-up delay-300">
-            Inspired by Gospel values, we serve Christ in the poor with love, respect, justice, and joy — uniting the faithful of three Falls Church parishes in service to our neighbors.
+            {h.heroDesc}
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center animate-fade-in-up delay-400 mb-6">
             <Button
@@ -53,7 +57,7 @@ export default function Home() {
               size="lg"
               className="bg-white text-[#1C3D5A] hover:bg-slate-100 font-semibold px-8 transition-all duration-200"
             >
-              <Link href="/request-help">Request Assistance</Link>
+              <Link href="/request-help">{h.requestAssistance}</Link>
             </Button>
             <Button
               asChild
@@ -63,7 +67,7 @@ export default function Home() {
             >
               <Link href="/volunteer">
                 <Users className="h-4 w-4 mr-2" />
-                Volunteer
+                {h.volunteer}
               </Link>
             </Button>
             <Button
@@ -74,13 +78,19 @@ export default function Home() {
             >
               <Link href="/donate">
                 <HeartHandshake className="h-4 w-4 mr-2" />
-                Donate
+                {h.donate}
               </Link>
             </Button>
           </div>
           <p className="animate-fade-in-up delay-500 text-slate-200 text-base">
             <Phone className="inline h-4 w-4 mr-1.5 mb-0.5" />
-            Call us: <a href={`tel:${CONFERENCE_PHONE.replace(/[^\d]/g, "")}`} className="font-semibold underline underline-offset-2 hover:text-white transition-colors">{CONFERENCE_PHONE}</a>
+            {h.callUs}{" "}
+            <a
+              href={`tel:${CONFERENCE_PHONE.replace(/[^\d]/g, "")}`}
+              className="font-semibold underline underline-offset-2 hover:text-white transition-colors"
+            >
+              {CONFERENCE_PHONE}
+            </a>
           </p>
         </div>
       </section>
@@ -88,14 +98,12 @@ export default function Home() {
       {/* Mission */}
       <section className="py-14 md:py-18 bg-secondary">
         <div className="container mx-auto px-4 max-w-3xl text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">Our Mission</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">{h.missionTitle}</h2>
           <blockquote className="text-lg text-foreground/80 leading-relaxed italic border-l-4 border-[#2B5EA7] pl-6 text-left">
-            "To live the Gospel message by serving Christ in the poor with love,
-            respect, justice, and joy, and by growing in holiness through prayer,
-            reflection, and action."
+            {h.missionQuote}
           </blockquote>
           <p className="mt-6 text-muted-foreground leading-relaxed">
-            The Mother of Hope Conference is a newly established conference of the Society of St. Vincent de Paul, linking the communities of three Falls Church parishes under the {DIOCESE}.
+            {h.missionDesc(DIOCESE)}
           </p>
         </div>
       </section>
@@ -103,9 +111,9 @@ export default function Home() {
       {/* Parish Partnership */}
       <section className="py-14 md:py-18">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-3">Our Parish Partnership</h2>
+          <h2 className="text-3xl font-bold text-center mb-3">{h.parishTitle}</h2>
           <p className="text-muted-foreground text-center mb-10 max-w-lg mx-auto">
-            Three Falls Church parishes united in service to our neighbors in need.
+            {h.parishDesc}
           </p>
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {PARISH_LINKS.map(({ name, url }) => (
@@ -121,13 +129,13 @@ export default function Home() {
                 </div>
                 <h3 className="font-semibold text-base mb-2">{name}</h3>
                 <span className="inline-flex items-center gap-1 text-xs text-[#2B5EA7] group-hover:underline">
-                  Visit website <ExternalLink className="w-3 h-3" />
+                  {h.visitWebsite} <ExternalLink className="w-3 h-3" />
                 </span>
               </a>
             ))}
           </div>
           <p className="text-center text-sm text-muted-foreground mt-6">
-            In partnership with the {DIOCESE}
+            {h.inPartnershipWith(DIOCESE)}
           </p>
         </div>
       </section>
@@ -135,10 +143,8 @@ export default function Home() {
       {/* Map */}
       <section className="py-14 md:py-18 bg-secondary">
         <div className="container mx-auto px-4 max-w-4xl text-center">
-          <h2 className="text-3xl font-bold mb-3">Where We Serve</h2>
-          <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
-            Our conference serves the Falls Church, Virginia community.
-          </p>
+          <h2 className="text-3xl font-bold mb-3">{h.mapTitle}</h2>
+          <p className="text-muted-foreground mb-8 max-w-lg mx-auto">{h.mapDesc}</p>
           <div className="rounded-xl overflow-hidden shadow-md border border-border">
             <iframe
               title="Falls Church, Virginia map"
@@ -156,58 +162,54 @@ export default function Home() {
       {/* Quick Links */}
       <section className="py-14 md:py-18">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-3">How We Serve</h2>
-          <p className="text-muted-foreground text-center mb-10">
-            Find the resources and opportunities that are right for you.
-          </p>
+          <h2 className="text-3xl font-bold text-center mb-3">{h.howWeServeTitle}</h2>
+          <p className="text-muted-foreground text-center mb-10">{h.howWeServeDesc}</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
             <QuickLink
               icon={<HandHeart className="w-5 h-5" />}
-              title="Request Help"
-              desc="Need assistance? We're here to help those in our parish boundaries."
+              title={h.qlRequestHelp}
+              desc={h.qlRequestHelpDesc}
               href="/request-help"
             />
             <QuickLink
               icon={<HeartHandshake className="w-5 h-5" />}
-              title="Donate"
-              desc="Support our work through financial gifts or material donations."
+              title={h.qlDonate}
+              desc={h.qlDonateDesc}
               href="/donate"
             />
             <QuickLink
               icon={<Users className="w-5 h-5" />}
-              title="Volunteer"
-              desc="Join the Society and serve alongside fellow Vincentians."
+              title={h.qlVolunteer}
+              desc={h.qlVolunteerDesc}
               href="/volunteer"
             />
             <QuickLink
               icon={<BookOpen className="w-5 h-5" />}
-              title="About SVdP"
-              desc="Learn about the history and mission of our Society."
+              title={h.qlAbout}
+              desc={h.qlAboutDesc}
               href="/about"
             />
             <QuickLink
               icon={<Flower2 className="w-5 h-5" />}
-              title="Spiritual Growth"
-              desc="Reflections and prayers for Vincentian members."
+              title={h.qlSpiritualGrowth}
+              desc={h.qlSpiritualGrowthDesc}
               href="/spiritual-growth"
             />
           </div>
         </div>
       </section>
 
-      {/* Latest News placeholder */}
-      <section className="py-14 md:py-18">
+      {/* Latest News */}
+      <section className="py-14 md:py-18 bg-secondary">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-3xl font-bold mb-3">Latest News</h2>
-          <p className="text-muted-foreground mb-8">Updates from our conference.</p>
+          <h2 className="text-3xl font-bold mb-3">{h.newsTitle}</h2>
+          <p className="text-muted-foreground mb-8">{h.newsSubtitle}</p>
           <div className="border rounded-xl p-6 bg-white hover:shadow-sm transition-shadow duration-200">
-            <p className="text-xs text-muted-foreground uppercase tracking-wide mb-2">April 2026</p>
-            <h3 className="font-semibold text-lg text-[#1C3D5A] mb-2">
-              Mother of Hope Conference Officially Established
-            </h3>
-            <p className="text-foreground/80 leading-relaxed">
-              We are pleased to announce that the Society of St. Vincent de Paul Mother of Hope Conference is now officially established in the Commonwealth of Virginia and registered as a nonprofit organization under Section 501(c)(3) of the Internal Revenue Code, effective April 2026. We are also pleased to share that our Conference President and Treasurer have both been elected, marking an important milestone as we begin our work in earnest. We look forward to serving our neighbors in the Falls Church community and growing in the Vincentian spirit of charity.
+            <p className="text-xs text-muted-foreground uppercase tracking-wide mb-2">
+              {h.newsDate}
             </p>
+            <h3 className="font-semibold text-lg text-[#1C3D5A] mb-2">{h.newsHeadline}</h3>
+            <p className="text-foreground/80 leading-relaxed">{h.newsBody}</p>
           </div>
         </div>
       </section>
@@ -215,10 +217,8 @@ export default function Home() {
       {/* CTA */}
       <section className="py-14 md:py-18 bg-[#1C3D5A] text-white">
         <div className="container mx-auto px-4 text-center max-w-2xl">
-          <h2 className="text-3xl font-bold mb-4">Join Us in Serving Our Neighbors</h2>
-          <p className="text-slate-300 mb-8 leading-relaxed">
-            Whether you need assistance, want to donate, or feel called to volunteer, the Mother of Hope Conference welcomes you.
-          </p>
+          <h2 className="text-3xl font-bold mb-4">{h.ctaTitle}</h2>
+          <p className="text-slate-300 mb-8 leading-relaxed">{h.ctaDesc}</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Button
               asChild
@@ -226,7 +226,7 @@ export default function Home() {
               className="bg-white text-[#1C3D5A] hover:bg-slate-100 font-semibold transition-all duration-200"
             >
               <Link href="/volunteer">
-                Become a Vincentian
+                {h.becomeVincentian}
                 <ChevronRight className="h-4 w-4 ml-1" />
               </Link>
             </Button>
@@ -236,7 +236,7 @@ export default function Home() {
               variant="ghost"
               className="border border-white/30 text-white bg-transparent hover:bg-white/10 hover:text-white transition-all duration-200"
             >
-              <Link href="/contact">Contact Us</Link>
+              <Link href="/contact">{h.contactUs}</Link>
             </Button>
           </div>
         </div>

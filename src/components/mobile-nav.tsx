@@ -3,25 +3,27 @@
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import Link from "next/link"
-
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/request-help", label: "Request Help" },
-  { href: "/donate", label: "Donate" },
-  { href: "/volunteer", label: "Volunteer" },
-  { href: "/about", label: "About SVdP" },
-  { href: "/spiritual-growth", label: "Spiritual Growth" },
-]
+import { useLanguage } from "@/components/language-provider"
 
 export function MobileNav() {
   const [isOpen, setIsOpen] = useState(false)
+  const { t } = useLanguage()
+
+  const navLinks = [
+    { href: "/", label: t.nav.home },
+    { href: "/request-help", label: t.nav.requestHelp },
+    { href: "/donate", label: t.nav.donate },
+    { href: "/volunteer", label: t.nav.volunteer },
+    { href: "/about", label: t.nav.about },
+    { href: "/spiritual-growth", label: t.nav.spiritualGrowth },
+  ]
 
   return (
     <>
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="p-2 text-muted-foreground hover:text-[#1C3D5A] transition-colors duration-200"
-        aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+        aria-label={isOpen ? t.nav.closeMenu : t.nav.openMenu}
         aria-expanded={isOpen}
       >
         {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
