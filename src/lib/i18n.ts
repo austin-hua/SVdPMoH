@@ -61,7 +61,7 @@ export const translations = {
       newsDate: "April 2026",
       newsHeadline: "Mother of Hope Conference Officially Established",
       newsBody:
-        "We are pleased to announce that the Society of St. Vincent de Paul Mother of Hope Conference is now officially established in the Commonwealth of Virginia and registered as a nonprofit organization under Section 501(c)(3) of the Internal Revenue Code, effective April 2026. We are also pleased to share that our Conference President and Treasurer have both been elected, marking an important milestone as we begin our work in earnest. We look forward to serving our neighbors in the Falls Church community and growing in the Vincentian spirit of charity.",
+        "We are pleased to announce that the Society of St. Vincent de Paul Mother of Hope Conference is now officially established in the Commonwealth of Virginia and registered as a nonprofit organization under Section 501(c)(3) of the Internal Revenue Code, effective April 2026. We are also pleased to share that our Conference President and Treasurer have both been elected, marking an important milestone as we begin our work in earnest. We look forward to serving our neighbors in the Falls Church area and growing in the Vincentian spirit of charity.",
       ctaTitle: "Join Us in Serving Our Neighbors",
       ctaDesc:
         "Whether you need assistance, want to donate, or feel called to volunteer,\nthe Mother of Hope Conference welcomes you.",
@@ -89,7 +89,7 @@ export const translations = {
       localConference2:
         "Our conference is unique in that it unites the faithful of three Falls Church-area parishes in a shared work of charity:",
       localConference3:
-        "By linking these three parishes together, we are able to pool our resources and extend our reach to serve more neighbors in need throughout the Falls Church community.",
+        "By linking these three parishes together, we are able to pool our resources and extend our reach to serve more neighbors in need throughout the Falls Church area.",
       learnMoreTitle: "Learn More",
       svdpUsaTitle: "SVdP USA National",
       svdpUsaDesc: "svdpusa.org — national organization, news, and resources",
@@ -111,7 +111,7 @@ export const translations = {
       onlineDesc:
         "Online giving is coming soon. In the meantime, please consider mailing a check or giving in person through your parish. We appreciate your patience as we get set up.",
       checkTitle: "Check or Cash",
-      checkDesc: "Make checks payable to SVdP Mother of Hope Conference and mail or drop off at:",
+      checkDesc: "Make checks payable to Society of St. Vincent de Paul, Mother of Hope Conference of Falls Church, Inc. and mail or drop off at:",
       furnitureTitle: "Furniture & Clothing Donations",
       furnitureDesc:
         "We gratefully accept gently used furniture and clothing to help families in need. Please review our guidelines before donating:",
@@ -133,9 +133,9 @@ export const translations = {
         "Please contact us before dropping off large items so we can coordinate pickup or drop-off logistics.",
       whyTitle: "Why Your Gift Matters",
       whyDesc1:
-        "One hundred percent of your donation to the Mother of Hope Conference goes directly to serving families in need in the Falls Church community. Your generosity allows us to provide emergency financial assistance, connect neighbors with essential resources, and carry out the Vincentian mission of charity.",
+        "One hundred percent of your donation to the Mother of Hope Conference goes directly to serving families in need in the Falls Church area. Your generosity allows us to provide emergency financial assistance, connect neighbors with essential resources, and carry out the Vincentian mission of charity.",
       whyDesc2:
-        "The Society of St. Vincent de Paul is a 501(c)(3) nonprofit organization. Your donation may be tax-deductible.",
+        "The Society of St. Vincent de Paul is a 501(c)(3) nonprofit organization (pending). Your donation may be tax-deductible.",
       questionsAbout: "Questions about donating?",
       contactBtn: "Contact Us",
     },
@@ -275,7 +275,7 @@ export const translations = {
       visitWebsite: "Visitar sitio web",
       inPartnershipWith: (diocese: string) => `En asociación con la ${diocese}`,
       mapTitle: "Dónde Servimos",
-      mapDesc: "Nuestra conferencia sirve principalmente a la comunidad de Falls Church, Virginia.",
+      mapDesc: "Nuestra conferencia sirve principalmente a la área de Falls Church, Virginia.",
       howWeServeTitle: "Cómo Servimos",
       howWeServeDesc: "Encuentre los recursos y oportunidades que son adecuados para usted.",
       qlRequestHelp: "Solicitar Ayuda",
@@ -294,7 +294,7 @@ export const translations = {
       newsDate: "Abril 2026",
       newsHeadline: "Conferencia Madre de Esperanza Establecida Oficialmente",
       newsBody:
-        "Nos complace anunciar que la Conferencia Madre de Esperanza de la Sociedad de San Vicente de Paúl ha sido establecida oficialmente en el Commonwealth de Virginia y registrada como organización sin fines de lucro bajo la Sección 501(c)(3) del Código de Rentas Internas, efectiva en abril de 2026. También nos complace compartir que nuestro Presidente y Tesorero de la Conferencia han sido elegidos, marcando un hito importante al comenzar nuestro trabajo en serio. Esperamos servir a nuestros vecinos en la comunidad de Falls Church y crecer en el espíritu vicentino de caridad.",
+        "Nos complace anunciar que la Conferencia Madre de Esperanza de la Sociedad de San Vicente de Paúl ha sido establecida oficialmente en el Commonwealth de Virginia y registrada como organización sin fines de lucro bajo la Sección 501(c)(3) del Código de Rentas Internas, efectiva en abril de 2026. También nos complace compartir que nuestro Presidente y Tesorero de la Conferencia han sido elegidos, marcando un hito importante al comenzar nuestro trabajo en serio. Esperamos servir a nuestros vecinos en la área de Falls Church y crecer en el espíritu vicentino de caridad.",
       ctaTitle: "Uínase a Nosotros en el Servicio a Nuestros Vecinos",
       ctaDesc:
         "Ya sea que necesite asistencia, quiera donar, o sienta el llamado a ser voluntario, la Conferencia Madre de Esperanza le da la bienvenida.",
@@ -323,7 +323,7 @@ export const translations = {
       localConference2:
         "Nuestra conferencia es única en que une a los fieles de tres parroquias del área de Falls Church en una obra compartida de caridad:",
       localConference3:
-        "Al vincular estas tres parroquias, podemos aunar nuestros recursos y ampliar nuestro alcance para servir a más vecinos necesitados en toda la comunidad de Falls Church.",
+        "Al vincular estas tres parroquias, podemos aunar nuestros recursos y ampliar nuestro alcance para servir a más vecinos necesitados en toda la área de Falls Church.",
       learnMoreTitle: "Más Información",
       svdpUsaTitle: "SVdP EE.UU. Nacional",
       svdpUsaDesc: "svdpusa.org — organización nacional, noticias y recursos",
@@ -347,7 +347,7 @@ export const translations = {
         "Las donaciones en línea estarán disponibles pronto. Mientras tanto, considere enviar un cheque por correo o donar en persona a través de su parroquia. Agradecemos su paciencia mientras nos organizamos.",
       checkTitle: "Cheque o Efectivo",
       checkDesc:
-        "Haga los cheques a nombre de SVdP Mother of Hope Conference y envíelos o entréguelos en:",
+        "Haga los cheques a nombre de Society of St. Vincent de Paul, Mother of Hope Conference of Falls Church, Inc. y envíelos o entréguelos en:",
       furnitureTitle: "Donaciones de Muebles y Ropa",
       furnitureDesc:
         "Aceptamos con gratitud muebles y ropa en buen estado para ayudar a las familias necesitadas. Por favor revise nuestras pautas antes de donar:",
@@ -369,9 +369,9 @@ export const translations = {
         "Por favor contáctenos antes de traer artículos grandes para coordinar la logística de recogida o entrega.",
       whyTitle: "Por Qué Su Donación Importa",
       whyDesc1:
-        "El cien por ciento de su donación a la Conferencia Madre de Esperanza va directamente a servir a las familias necesitadas en la comunidad de Falls Church. Su generosidad nos permite brindar asistencia financiera de emergencia, conectar a los vecinos con recursos esenciales y llevar a cabo la misión vicentina de caridad.",
+        "El cien por ciento de su donación a la Conferencia Madre de Esperanza va directamente a servir a las familias necesitadas en la área de Falls Church. Su generosidad nos permite brindar asistencia financiera de emergencia, conectar a los vecinos con recursos esenciales y llevar a cabo la misión vicentina de caridad.",
       whyDesc2:
-        "La Sociedad de San Vicente de Paúl es una organización sin fines de lucro 501(c)(3). Su donación puede ser deducible de impuestos.",
+        "La Sociedad de San Vicente de Paúl es una organización sin fines de lucro 501(c)(3) (pendiente). Su donación puede ser deducible de impuestos.",
       questionsAbout: "¿Preguntas sobre cómo donar?",
       contactBtn: "Contáctenos",
     },

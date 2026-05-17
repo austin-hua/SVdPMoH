@@ -57,7 +57,7 @@ export default function About() {
               width={0}
               height={0}
               sizes="200px"
-              className="w-full h-auto"
+              className="w-full h-auto rounded-full"
             />
           </div>
           <div>

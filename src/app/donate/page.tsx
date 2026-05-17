@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Banknote, Sofa, HeartHandshake, Info } from "lucide-react"
+import { Banknote, HeartHandshake } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/components/language-provider"
 
@@ -46,7 +46,7 @@ export default function Donate() {
             <div>
               <h3 className="font-semibold text-lg mb-1">{d.checkTitle}</h3>
               <p className="text-sm text-muted-foreground mb-2">
-                {d.checkDesc} <strong>SVdP Mother of Hope Conference</strong>
+                {d.checkDesc}
               </p>
               <address className="text-sm not-italic text-muted-foreground">
                 905 Park Avenue<br />
@@ -57,41 +57,6 @@ export default function Donate() {
         </div>
       </section>
 
-      {/* Furniture & Clothing */}
-      <section className="mb-10">
-        <h2 className="text-2xl font-semibold mb-5 flex items-center gap-2">
-          <Sofa className="h-5 w-5 text-[#2B5EA7]" />
-          {d.furnitureTitle}
-        </h2>
-
-        <div className="border rounded-xl p-6 bg-white space-y-4">
-          <p className="text-sm text-muted-foreground">{d.furnitureDesc}</p>
-
-          <div className="grid sm:grid-cols-2 gap-4">
-            <div className="bg-secondary rounded-lg p-4">
-              <h3 className="font-semibold mb-2 text-[#1C3D5A]">{d.weAccept}</h3>
-              <ul className="text-sm text-muted-foreground space-y-1">
-                {d.acceptList.map((item) => (
-                  <li key={item}>✓ {item}</li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-secondary rounded-lg p-4">
-              <h3 className="font-semibold mb-2 text-[#1C3D5A]">{d.weCannotAccept}</h3>
-              <ul className="text-sm text-muted-foreground space-y-1">
-                {d.cannotAcceptList.map((item) => (
-                  <li key={item}>✗ {item}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <div className="flex items-start gap-3 bg-blue-50 rounded-lg p-4">
-            <Info className="h-4 w-4 text-[#2B5EA7] shrink-0 mt-0.5" />
-            <p className="text-sm text-muted-foreground">{d.coordNote}</p>
-          </div>
-        </div>
-      </section>
 
       {/* Why Give */}
       <section className="bg-[#1C3D5A]/5 rounded-xl p-8 mb-8">
