@@ -21,7 +21,7 @@ export const translations = {
       about: "About SVdP",
       spiritualGrowth: "Spiritual Growth",
       rights: (year: number) =>
-        `© ${year} Society of St. Vincent de Paul – Mother of Hope Conference. All rights reserved.`,
+        `© ${year} Society of St. Vincent de Paul, Mother of Hope Conference of Falls Church, Inc. All rights reserved.`,
     },
     home: {
       heroLocation: "Falls Church, Virginia",
@@ -251,7 +251,7 @@ export const translations = {
       about: "Sobre SVdP",
       spiritualGrowth: "Crecimiento Espiritual",
       rights: (year: number) =>
-        `© ${year} Society of St. Vincent de Paul – Mother of Hope Conference. Todos los derechos reservados.`,
+        `© ${year} Society of St. Vincent de Paul, Mother of Hope Conference of Falls Church, Inc. Todos los derechos reservados.`,
     },
     home: {
       heroLocation: "Falls Church, Virginia",
