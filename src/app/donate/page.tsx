@@ -14,7 +14,7 @@ export default function Donate() {
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold mb-3">{d.title}</h1>
         <p className="text-muted-foreground text-lg max-w-xl mx-auto italic">
-          &ldquo;{d.quote.replace(/[""]/g, "")}&rdquo;
+          &ldquo;{d.quote}&rdquo;
         </p>
         <p className="text-sm text-muted-foreground mt-2">{d.quoteRef}</p>
       </div>

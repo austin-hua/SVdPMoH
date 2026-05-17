@@ -104,7 +104,7 @@ export const translations = {
     donate: {
       title: "Donate",
       quote:
-        "“Give, and it will be given to you. A good measure, pressed down, shaken together and running over, will be poured into your lap.”",
+        "Give, and it will be given to you. A good measure, pressed down, shaken together and running over, will be poured into your lap.",
       quoteRef: "— Luke 6:38",
       financialTitle: "Financial Giving",
       onlineTitle: "Online Giving",
@@ -338,7 +338,7 @@ export const translations = {
     donate: {
       title: "Donar",
       quote:
-        "“Den, y se les dará; se les echará en el regazo una medida buena, apretada, remecida y rebosante.”",
+        "Den, y se les dará; se les echará en el regazo una medida buena, apretada, remecida y rebosante.",
       quoteRef: "— Lucas 6:38",
       financialTitle: "Donaciones Financieras",
       onlineTitle: "Donación en Línea",
