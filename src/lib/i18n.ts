@@ -22,6 +22,7 @@ export const translations = {
       spiritualGrowth: "Spiritual Growth",
       rights: (year: number) =>
         `© ${year} Society of St. Vincent de Paul, Mother of Hope Conference of Falls Church, Inc. All rights reserved.`,
+      developedBy: "Developed by:",
     },
     home: {
       heroLocation: "Falls Church, Virginia",
@@ -107,11 +108,22 @@ export const translations = {
         "Give, and it will be given to you. A good measure, pressed down, shaken together and running over, will be poured into your lap.",
       quoteRef: "— Luke 6:38",
       financialTitle: "Financial Giving",
-      onlineTitle: "Online Giving",
+      onlineTitle: "Donate Online",
       onlineDesc:
         "Online giving is coming soon. In the meantime, please consider mailing a check or giving in person through your parish. We appreciate your patience as we get set up.",
-      checkTitle: "Check or Cash",
-      checkDesc: "Make checks payable to Society of St. Vincent de Paul, Mother of Hope Conference of Falls Church, Inc. and mail or drop off at:",
+      checkTitle: "Donate by Check",
+      checkDesc: "Please make checks payable to SVDP Mother of Hope Conference and mail to:",
+      checkAttn: "ATTN: Treasurer, SVDP Mother of Hope Conference",
+      stockTitle: "Donate Stock",
+      stockDesc: "To donate stock, please contact your advisor/brokerage firm to initiate the transfer of stock. The delivery instructions are as follows:",
+      stockAddressNote: "If an address is requested, please use the following:",
+      dafTitle: "Donate from a Donor Advised Fund (DAF)",
+      dafDesc: "To donate from a DAF, the following information will be requested:",
+      dafNote: "Since we are a new organization, our information may not initially populate at your DAF. You may need to enter all the necessary information.",
+      qcdTitle: "IRA Qualified Charitable Distribution (QCD)",
+      qcdDesc: "To make a QCD, reach out to your brokerage firm/financial advisor to initiate the transfer. They will generally request the following information and give you the option of either mailing the check to you or directly to us.",
+      qcdAttn: "ATTN: Treasurer, SVDP Mother of Hope Conference",
+      qcdNote: "A qualified charitable distribution (QCD) allows those 70½ years old or older to donate up to $111,000 from a traditional IRA instead of taking their required minimum distributions.",
       furnitureTitle: "Furniture & Clothing Donations",
       furnitureDesc:
         "We gratefully accept gently used furniture and clothing to help families in need. Please review our guidelines before donating:",
@@ -253,6 +265,7 @@ export const translations = {
       spiritualGrowth: "Crecimiento Espiritual",
       rights: (year: number) =>
         `© ${year} Society of St. Vincent de Paul, Mother of Hope Conference of Falls Church, Inc. Todos los derechos reservados.`,
+      developedBy: "Desarrollado por:",
     },
     home: {
       heroLocation: "Falls Church, Virginia",
@@ -342,12 +355,22 @@ export const translations = {
         "Den, y se les dará; se les echará en el regazo una medida buena, apretada, remecida y rebosante.",
       quoteRef: "— Lucas 6:38",
       financialTitle: "Donaciones Financieras",
-      onlineTitle: "Donación en Línea",
+      onlineTitle: "Donar en Línea",
       onlineDesc:
         "Las donaciones en línea estarán disponibles pronto. Mientras tanto, considere enviar un cheque por correo o donar en persona a través de su parroquia. Agradecemos su paciencia mientras nos organizamos.",
-      checkTitle: "Cheque o Efectivo",
-      checkDesc:
-        "Haga los cheques a nombre de Society of St. Vincent de Paul, Mother of Hope Conference of Falls Church, Inc. y envíelos o entréguelos en:",
+      checkTitle: "Donar con Cheque",
+      checkDesc: "Por favor haga los cheques a nombre de SVDP Mother of Hope Conference y envíelos por correo a:",
+      checkAttn: "ATTN: Treasurer, SVDP Mother of Hope Conference",
+      stockTitle: "Donar Acciones",
+      stockDesc: "Para donar acciones, comuníquese con su asesor/firma de corretaje para iniciar la transferencia. Las instrucciones de entrega son las siguientes:",
+      stockAddressNote: "Si se solicita una dirección, utilice la siguiente:",
+      dafTitle: "Donar desde un Fondo Asesorado por el Donante (DAF)",
+      dafDesc: "Para donar desde un DAF, se solicitará la siguiente información:",
+      dafNote: "Como somos una organización nueva, es posible que nuestra información no aparezca inicialmente en su DAF. Es posible que deba ingresar toda la información necesaria.",
+      qcdTitle: "Distribución Caritativa Calificada de IRA (QCD)",
+      qcdDesc: "Para realizar una QCD, comuníquese con su firma de corretaje/asesor financiero para iniciar la transferencia. Generalmente solicitarán la siguiente información y le darán la opción de enviar el cheque a usted o directamente a nosotros.",
+      qcdAttn: "ATTN: Treasurer, SVDP Mother of Hope Conference",
+      qcdNote: "Una distribución caritativa calificada (QCD) permite a personas de 70½ años o más donar hasta $111,000 desde una IRA tradicional en lugar de tomar sus distribuciones mínimas requeridas.",
       furnitureTitle: "Donaciones de Muebles y Ropa",
       furnitureDesc:
         "Aceptamos con gratitud muebles y ropa en buen estado para ayudar a las familias necesitadas. Por favor revise nuestras pautas antes de donar:",

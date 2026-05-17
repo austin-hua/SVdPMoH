@@ -126,7 +126,7 @@ export function SiteFooter() {
         <div className="border-t border-white/10 mt-8 pt-6 text-center text-sm text-slate-500">
           <p>{t.footer.rights(new Date().getFullYear())}</p>
           <p className="mt-2 text-xs text-slate-600">
-            Developed by:{" "}
+            {t.footer.developedBy}{" "}
             <a
               href="https://www.linkedin.com/in/austin-hua"
               target="_blank"

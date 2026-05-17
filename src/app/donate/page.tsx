@@ -1,9 +1,50 @@
 "use client"
 
 import Link from "next/link"
-import { Banknote, HeartHandshake } from "lucide-react"
+import { Banknote, HeartHandshake, TrendingUp, Landmark, Heart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/components/language-provider"
+
+function InfoRow({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="flex gap-2 text-sm">
+      <span className="text-muted-foreground shrink-0">{label}</span>
+      <span className="font-medium">{value}</span>
+    </div>
+  )
+}
+
+function SectionCard({
+  icon,
+  title,
+  children,
+  dashed,
+}: {
+  icon: React.ReactNode
+  title: string
+  children: React.ReactNode
+  dashed?: boolean
+}) {
+  return (
+    <div
+      className={`rounded-xl p-6 bg-white mb-4 ${
+        dashed
+          ? "border-2 border-dashed border-[#2B5EA7]/20 bg-[#1C3D5A]/[0.02]"
+          : "border"
+      }`}
+    >
+      <div className="flex items-start gap-4">
+        <div className="shrink-0 w-10 h-10 rounded-lg bg-[#1C3D5A]/5 text-[#2B5EA7] flex items-center justify-center">
+          {icon}
+        </div>
+        <div className="flex-1">
+          <h3 className="font-semibold text-lg mb-3">{title}</h3>
+          {children}
+        </div>
+      </div>
+    </div>
+  )
+}
 
 export default function Donate() {
   const { t } = useLanguage()
@@ -19,47 +60,68 @@ export default function Donate() {
         <p className="text-sm text-muted-foreground mt-2">{d.quoteRef}</p>
       </div>
 
-      {/* Financial Giving */}
-      <section className="mb-10">
-        <h2 className="text-2xl font-semibold mb-5 flex items-center gap-2">
-          <Banknote className="h-5 w-5 text-[#2B5EA7]" />
-          {d.financialTitle}
-        </h2>
+      {/* Donate Online */}
+      <SectionCard icon={<HeartHandshake className="h-5 w-5" />} title={d.onlineTitle} dashed>
+        <p className="text-sm text-muted-foreground">{d.onlineDesc}</p>
+      </SectionCard>
 
-        <div className="border-2 border-dashed border-[#2B5EA7]/20 rounded-xl p-6 bg-[#1C3D5A]/[0.02] mb-4">
-          <div className="flex items-start gap-4">
-            <div className="shrink-0 w-10 h-10 rounded-lg bg-[#1C3D5A]/5 text-[#2B5EA7] flex items-center justify-center">
-              <HeartHandshake className="h-5 w-5" />
-            </div>
-            <div>
-              <h3 className="font-semibold text-lg mb-1">{d.onlineTitle}</h3>
-              <p className="text-sm text-muted-foreground">{d.onlineDesc}</p>
-            </div>
-          </div>
+      {/* Donate by Check */}
+      <SectionCard icon={<Banknote className="h-5 w-5" />} title={d.checkTitle}>
+        <p className="text-sm text-muted-foreground mb-3">{d.checkDesc}</p>
+        <address className="text-sm not-italic space-y-0.5">
+          <p className="font-medium">St. James Catholic Church</p>
+          <p>905 Park Avenue</p>
+          <p>Falls Church, VA 22046</p>
+          <p>{d.checkAttn}</p>
+        </address>
+      </SectionCard>
+
+      {/* Donate Stock */}
+      <SectionCard icon={<TrendingUp className="h-5 w-5" />} title={d.stockTitle}>
+        <p className="text-sm text-muted-foreground mb-3">{d.stockDesc}</p>
+        <div className="bg-secondary rounded-lg p-4 space-y-1.5 mb-3">
+          <InfoRow label="Brokerage Firm:" value="Fidelity Investments" />
+          <InfoRow label="Account Name:" value="SVDP Mother of Hope Conference" />
+          <InfoRow label="Account Number:" value="Z34-856905" />
+          <InfoRow label="DTC:" value="0226" />
         </div>
+        <p className="text-sm text-muted-foreground mb-2">{d.stockAddressNote}</p>
+        <address className="text-sm not-italic space-y-0.5">
+          <p className="font-medium">Fidelity Investments</p>
+          <p>Attn: TOA Receives</p>
+          <p>PO Box 770001</p>
+          <p>Cincinnati, OH 45277-0036</p>
+        </address>
+      </SectionCard>
 
-        <div className="border rounded-xl p-6 bg-white">
-          <div className="flex items-start gap-4">
-            <div className="shrink-0 w-10 h-10 rounded-lg bg-green-50 text-green-700 flex items-center justify-center">
-              <Banknote className="h-5 w-5" />
-            </div>
-            <div>
-              <h3 className="font-semibold text-lg mb-1">{d.checkTitle}</h3>
-              <p className="text-sm text-muted-foreground mb-2">
-                {d.checkDesc}
-              </p>
-              <address className="text-sm not-italic text-muted-foreground">
-                905 Park Avenue<br />
-                Falls Church, Virginia 22046
-              </address>
-            </div>
-          </div>
+      {/* Donate from a DAF */}
+      <SectionCard icon={<Landmark className="h-5 w-5" />} title={d.dafTitle}>
+        <p className="text-sm text-muted-foreground mb-3">{d.dafDesc}</p>
+        <div className="bg-secondary rounded-lg p-4 space-y-1.5 mb-3">
+          <p className="text-sm font-medium">SVDP Mother of Hope Conference</p>
+          <p className="text-sm">905 Park Avenue</p>
+          <p className="text-sm">Falls Church, VA 22046</p>
+          <InfoRow label="Tax ID:" value="42-1937873" />
+          <p className="text-sm text-muted-foreground">Phone Number</p>
+          <p className="text-sm text-muted-foreground">Email Address</p>
         </div>
-      </section>
+        <p className="text-sm text-muted-foreground">{d.dafNote}</p>
+      </SectionCard>
 
+      {/* IRA QCD */}
+      <SectionCard icon={<Heart className="h-5 w-5" />} title={d.qcdTitle}>
+        <p className="text-sm text-muted-foreground mb-3">{d.qcdDesc}</p>
+        <div className="bg-secondary rounded-lg p-4 space-y-0.5 mb-3">
+          <p className="text-sm font-medium">SVDP Mother of Hope Conference</p>
+          <p className="text-sm">905 Park Avenue</p>
+          <p className="text-sm">Falls Church, VA 22046</p>
+          <p className="text-sm">{d.qcdAttn}</p>
+        </div>
+        <p className="text-sm text-muted-foreground">{d.qcdNote}</p>
+      </SectionCard>
 
       {/* Why Give */}
-      <section className="bg-[#1C3D5A]/5 rounded-xl p-8 mb-8">
+      <section className="bg-[#1C3D5A]/5 rounded-xl p-8 mb-8 mt-6">
         <h2 className="text-xl font-semibold mb-3 text-[#1C3D5A]">{d.whyTitle}</h2>
         <p className="text-sm text-foreground/80 leading-relaxed mb-3">{d.whyDesc1}</p>
         <p className="text-sm text-foreground/80 leading-relaxed">{d.whyDesc2}</p>
