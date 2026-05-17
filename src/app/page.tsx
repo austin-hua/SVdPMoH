@@ -186,37 +186,41 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-3">{h.howWeServeTitle}</h2>
           <p className="text-muted-foreground text-center mb-10">{h.howWeServeDesc}</p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
-            <QuickLink
-              icon={<HandHeart className="w-5 h-5" />}
-              title={h.qlRequestHelp}
-              desc={h.qlRequestHelpDesc}
-              href="/request-help"
-            />
-            <QuickLink
-              icon={<HeartHandshake className="w-5 h-5" />}
-              title={h.qlDonate}
-              desc={h.qlDonateDesc}
-              href="/donate"
-            />
-            <QuickLink
-              icon={<Users className="w-5 h-5" />}
-              title={h.qlVolunteer}
-              desc={h.qlVolunteerDesc}
-              href="/volunteer"
-            />
-            <QuickLink
-              icon={<BookOpen className="w-5 h-5" />}
-              title={h.qlAbout}
-              desc={h.qlAboutDesc}
-              href="/about"
-            />
-            <QuickLink
-              icon={<Flower2 className="w-5 h-5" />}
-              title={h.qlSpiritualGrowth}
-              desc={h.qlSpiritualGrowthDesc}
-              href="/spiritual-growth"
-            />
+          <div className="max-w-5xl mx-auto space-y-5">
+            <div className="grid sm:grid-cols-3 gap-5">
+              <QuickLink
+                icon={<HandHeart className="w-5 h-5" />}
+                title={h.qlRequestHelp}
+                desc={h.qlRequestHelpDesc}
+                href="/request-help"
+              />
+              <QuickLink
+                icon={<HeartHandshake className="w-5 h-5" />}
+                title={h.qlDonate}
+                desc={h.qlDonateDesc}
+                href="/donate"
+              />
+              <QuickLink
+                icon={<Users className="w-5 h-5" />}
+                title={h.qlVolunteer}
+                desc={h.qlVolunteerDesc}
+                href="/volunteer"
+              />
+            </div>
+            <div className="grid sm:grid-cols-2 gap-5 max-w-2xl mx-auto">
+              <QuickLink
+                icon={<BookOpen className="w-5 h-5" />}
+                title={h.qlAbout}
+                desc={h.qlAboutDesc}
+                href="/about"
+              />
+              <QuickLink
+                icon={<Flower2 className="w-5 h-5" />}
+                title={h.qlSpiritualGrowth}
+                desc={h.qlSpiritualGrowthDesc}
+                href="/spiritual-growth"
+              />
+            </div>
           </div>
         </div>
       </section>
