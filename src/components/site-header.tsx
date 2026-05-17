@@ -70,22 +70,22 @@ function LanguageToggle({ locale, toggle }: { locale: "en" | "es"; toggle: () =>
       className="flex items-center gap-0.5 text-xs font-semibold border border-border rounded-md overflow-hidden hover:border-[#1C3D5A] transition-colors duration-200"
     >
       <span
-        className={`px-2 py-1 transition-colors duration-200 ${
+        className={`px-2.5 py-1 transition-colors duration-200 ${
           locale === "en"
             ? "bg-[#1C3D5A] text-white"
             : "text-muted-foreground hover:text-[#1C3D5A]"
         }`}
       >
-        EN
+        English
       </span>
       <span
-        className={`px-2 py-1 transition-colors duration-200 ${
+        className={`px-2.5 py-1 transition-colors duration-200 ${
           locale === "es"
             ? "bg-[#1C3D5A] text-white"
             : "text-muted-foreground hover:text-[#1C3D5A]"
         }`}
       >
-        ES
+        Español
       </span>
     </button>
   )

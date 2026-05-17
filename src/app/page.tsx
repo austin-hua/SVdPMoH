@@ -125,7 +125,7 @@ export default function Home() {
       <section className="pt-14 md:pt-18 pb-0">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-3">{h.parishTitle}</h2>
-          <p className="text-muted-foreground text-center mb-10 whitespace-nowrap">
+          <p className="text-muted-foreground text-center mb-10">
             {h.parishDesc}
           </p>
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -190,7 +190,7 @@ export default function Home() {
       <section className="py-14 md:py-18 bg-secondary">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h2 className="text-3xl font-bold mb-3">{h.mapTitle}</h2>
-          <p className="text-muted-foreground mb-8 whitespace-nowrap">{h.mapDesc}</p>
+          <p className="text-muted-foreground mb-8">{h.mapDesc}</p>
           <div className="rounded-xl overflow-hidden shadow-md border border-border">
             <iframe
               title="Falls Church, Virginia map"
