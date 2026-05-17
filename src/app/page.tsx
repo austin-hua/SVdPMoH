@@ -10,7 +10,6 @@ import {
   BookOpen,
   Flower2,
   ChevronRight,
-  Church,
   ExternalLink,
   Phone,
 } from "lucide-react"
@@ -18,9 +17,9 @@ import { DIOCESE, CONFERENCE_PHONE } from "@/lib/constants"
 import { useLanguage } from "@/components/language-provider"
 
 const PARISH_LINKS = [
-  { name: "St. James Catholic Church", url: "https://stjamescatholic.org/" },
-  { name: "St. Anthony of Padua Catholic Church", url: "https://www.stanthonyparish.org/" },
-  { name: "St. Philip Catholic Church", url: "https://www.stphilipfc.org/" },
+  { name: "St. James Catholic Church", url: "https://stjamescatholic.org/", logo: "/images/james_temp.png", logoSize: "max-h-24" },
+  { name: "St. Anthony of Padua Catholic Church", url: "https://www.stanthonyparish.org/", logo: "/images/anthony_temp.png", logoSize: "max-h-24" },
+  { name: "St. Philip Catholic Church", url: "https://www.stphilipfc.org/", logo: "/images/philip_temp.png", logoSize: "max-h-32" },
 ]
 
 export default function Home() {
@@ -97,14 +96,28 @@ export default function Home() {
 
       {/* Mission */}
       <section className="py-14 md:py-18 bg-secondary">
-        <div className="container mx-auto px-4 max-w-3xl text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">{h.missionTitle}</h2>
-          <blockquote className="text-lg text-foreground/80 leading-relaxed italic border-l-4 border-[#2B5EA7] pl-6 text-left">
-            {h.missionQuote}
-          </blockquote>
-          <p className="mt-6 text-muted-foreground leading-relaxed">
-            {h.missionDesc(DIOCESE)}
-          </p>
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="flex flex-col sm:flex-row gap-8 items-center">
+            <div className="shrink-0 sm:w-48">
+              <Image
+                src="/images/motherofhope.png"
+                alt="Mary, Mother of Hope"
+                width={0}
+                height={0}
+                sizes="200px"
+                className="w-full h-auto rounded-xl shadow-md"
+              />
+            </div>
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">{h.missionTitle}</h2>
+              <blockquote className="text-lg text-foreground/80 leading-relaxed italic border-l-4 border-[#2B5EA7] pl-6">
+                {h.missionQuote}
+              </blockquote>
+              <p className="mt-6 text-muted-foreground leading-relaxed">
+                {h.missionDesc(DIOCESE)}
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -112,11 +125,11 @@ export default function Home() {
       <section className="py-14 md:py-18">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-3">{h.parishTitle}</h2>
-          <p className="text-muted-foreground text-center mb-10 max-w-lg mx-auto">
+          <p className="text-muted-foreground text-center mb-10 whitespace-nowrap">
             {h.parishDesc}
           </p>
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {PARISH_LINKS.map(({ name, url }) => (
+            {PARISH_LINKS.map(({ name, url, logo, logoSize }) => (
               <a
                 key={name}
                 href={url}
@@ -124,10 +137,19 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 text-center border border-border block cursor-pointer"
               >
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#1C3D5A]/5 text-[#2B5EA7] mb-4 group-hover:bg-[#1C3D5A]/10 transition-colors">
-                  <Church className="w-5 h-5" />
+                <div className="flex items-center justify-center h-24 mb-4">
+                  <Image
+                    src={logo}
+                    alt={`${name} logo`}
+                    width={0}
+                    height={0}
+                    sizes="160px"
+                    className={`${logoSize} w-auto object-contain`}
+                  />
                 </div>
-                <h3 className="font-semibold text-base mb-2">{name}</h3>
+                <h3 className="font-semibold text-base mb-2">
+                  {name.replace(" Catholic Church", "")}<br />Catholic Church
+                </h3>
                 <span className="inline-flex items-center gap-1 text-xs text-[#2B5EA7] group-hover:underline">
                   {h.visitWebsite} <ExternalLink className="w-3 h-3" />
                 </span>
@@ -144,7 +166,7 @@ export default function Home() {
       <section className="py-14 md:py-18 bg-secondary">
         <div className="container mx-auto px-4 max-w-4xl text-center">
           <h2 className="text-3xl font-bold mb-3">{h.mapTitle}</h2>
-          <p className="text-muted-foreground mb-8 max-w-lg mx-auto">{h.mapDesc}</p>
+          <p className="text-muted-foreground mb-8 whitespace-nowrap">{h.mapDesc}</p>
           <div className="rounded-xl overflow-hidden shadow-md border border-border">
             <iframe
               title="Falls Church, Virginia map"
@@ -218,7 +240,7 @@ export default function Home() {
       <section className="py-14 md:py-18 bg-[#1C3D5A] text-white">
         <div className="container mx-auto px-4 text-center max-w-2xl">
           <h2 className="text-3xl font-bold mb-4">{h.ctaTitle}</h2>
-          <p className="text-slate-300 mb-8 leading-relaxed">{h.ctaDesc}</p>
+          <p className="text-slate-300 mb-8 leading-relaxed whitespace-pre-line">{h.ctaDesc}</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Button
               asChild
