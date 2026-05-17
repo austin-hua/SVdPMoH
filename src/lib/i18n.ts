@@ -147,9 +147,9 @@ export const translations = {
       step1Title: "Attend a Meeting",
       step1Desc:
         "Come to one of our conference meetings to meet our members and learn about our work. Meetings are open to anyone interested in joining.",
-      step2Title: "Become a Probationer",
+      step2Title: "Become an Associate Member",
       step2Desc:
-        "New members begin a period of formation known as probation — typically lasting about a year — to learn the Vincentian charism and way of service.",
+        "New members begin a 6-week period of formation to learn the Vincentian charism and way of service.",
       step3Title: "Take Your Active Membership",
       step3Desc:
         "After your formation period, you are formally welcomed as an active member of the Society of St. Vincent de Paul.",
@@ -382,9 +382,9 @@ export const translations = {
       step1Title: "Asistir a una Reunión",
       step1Desc:
         "Venga a una de nuestras reuniones de conferencia para conocer a nuestros miembros y aprender sobre nuestro trabajo. Las reuniones están abiertas a cualquier persona interesada en unirse.",
-      step2Title: "Convertirse en Probacionista",
+      step2Title: "Convertirse en Miembro Asociado",
       step2Desc:
-        "Los nuevos miembros comienzan un período de formación conocido como probación — que suele durar alrededor de un año — para aprender el carisma vicentino y el modo de servicio.",
+        "Los nuevos miembros comienzan un período de formación de 6 semanas para aprender el carisma vicentino y el modo de servicio.",
       step3Title: "Tomar su Membresía Activa",
       step3Desc:
         "Después de su período de formación, es formalmente bienvenido como miembro activo de la Sociedad de San Vicente de Paúl.",

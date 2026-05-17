@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Users, Heart, HandHeart, BookOpen, ChevronRight } from "lucide-react"
+import { Users, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/components/language-provider"
 
@@ -26,23 +26,6 @@ export default function Volunteer() {
           <StepCard number="1" title={v.step1Title} desc={v.step1Desc} />
           <StepCard number="2" title={v.step2Title} desc={v.step2Desc} />
           <StepCard number="3" title={v.step3Title} desc={v.step3Desc} />
-        </div>
-        <div className="mt-6 bg-[#1C3D5A]/5 rounded-xl p-5 text-sm text-muted-foreground">
-          <strong className="text-foreground">{v.membershipLabel}</strong> {v.membershipNote}
-        </div>
-      </section>
-
-      {/* Current Opportunities */}
-      <section className="mb-14">
-        <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
-          <HandHeart className="h-5 w-5 text-[#2B5EA7]" />
-          {v.opportunitiesTitle}
-        </h2>
-        <div className="space-y-4">
-          <OpportunityCard icon={<Heart className="h-5 w-5" />} title={v.opp1Title} desc={v.opp1Desc} />
-          <OpportunityCard icon={<HandHeart className="h-5 w-5" />} title={v.opp2Title} desc={v.opp2Desc} />
-          <OpportunityCard icon={<Users className="h-5 w-5" />} title={v.opp3Title} desc={v.opp3Desc} />
-          <OpportunityCard icon={<BookOpen className="h-5 w-5" />} title={v.opp4Title} desc={v.opp4Desc} />
         </div>
       </section>
 
@@ -78,16 +61,3 @@ function StepCard({ number, title, desc }: { number: string; title: string; desc
   )
 }
 
-function OpportunityCard({ icon, title, desc }: { icon: React.ReactNode; title: string; desc: string }) {
-  return (
-    <div className="flex gap-4 p-5 border rounded-xl bg-white hover:shadow-sm transition-shadow duration-200">
-      <div className="shrink-0 w-10 h-10 rounded-lg bg-[#1C3D5A]/5 text-[#2B5EA7] flex items-center justify-center">
-        {icon}
-      </div>
-      <div>
-        <h3 className="font-semibold mb-1">{title}</h3>
-        <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
-      </div>
-    </div>
-  )
-}

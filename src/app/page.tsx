@@ -105,7 +105,7 @@ export default function Home() {
                 width={0}
                 height={0}
                 sizes="200px"
-                className="w-full h-auto rounded-xl shadow-md"
+                className="w-full h-auto rounded-full shadow-md"
               />
             </div>
             <div>
