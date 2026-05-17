@@ -107,10 +107,17 @@ export default function About() {
             href={SVDP_NATIONAL_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-start gap-4 p-5 border rounded-xl bg-white hover:shadow-sm hover:-translate-y-0.5 transition-all duration-200"
+            className="flex items-center gap-4 p-5 border rounded-xl bg-white hover:shadow-sm hover:-translate-y-0.5 transition-all duration-200"
           >
-            <div className="shrink-0 w-10 h-10 rounded-lg bg-[#1C3D5A]/5 text-[#2B5EA7] flex items-center justify-center">
-              <Globe className="h-5 w-5" />
+            <div className="shrink-0 flex items-center justify-center w-16 h-16">
+              <Image
+                src="/images/svdp_temp.png"
+                alt="SVdP USA logo"
+                width={0}
+                height={0}
+                sizes="64px"
+                className="max-h-16 w-auto object-contain"
+              />
             </div>
             <div>
               <h3 className="font-semibold mb-1">{a.svdpUsaTitle}</h3>
@@ -121,10 +128,17 @@ export default function About() {
             href={SVDP_COUNCIL_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-start gap-4 p-5 border rounded-xl bg-white hover:shadow-sm hover:-translate-y-0.5 transition-all duration-200"
+            className="flex items-center gap-4 p-5 border rounded-xl bg-white hover:shadow-sm hover:-translate-y-0.5 transition-all duration-200"
           >
-            <div className="shrink-0 w-10 h-10 rounded-lg bg-[#1C3D5A]/5 text-[#2B5EA7] flex items-center justify-center">
-              <Church className="h-5 w-5" />
+            <div className="shrink-0 flex items-center justify-center w-16 h-16">
+              <Image
+                src="/images/svdp_temp.png"
+                alt="SVdP Arlington Council logo"
+                width={0}
+                height={0}
+                sizes="64px"
+                className="max-h-16 w-auto object-contain"
+              />
             </div>
             <div>
               <h3 className="font-semibold mb-1">{a.svdpCouncilTitle}</h3>

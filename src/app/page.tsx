@@ -19,7 +19,7 @@ import { useLanguage } from "@/components/language-provider"
 const PARISH_LINKS = [
   { name: "St. James Catholic Church", url: "https://stjamescatholic.org/", logo: "/images/james_temp.png", logoSize: "max-h-24" },
   { name: "St. Anthony of Padua Catholic Church", url: "https://www.stanthonyparish.org/", logo: "/images/anthony_temp.png", logoSize: "max-h-24" },
-  { name: "St. Philip Catholic Church", url: "https://www.stphilipfc.org/", logo: "/images/philip_temp.png", logoSize: "max-h-32" },
+  { name: "St. Philip Catholic Church", url: "https://www.stphilipfc.org/", logo: "/images/philip_temp.png", logoSize: "max-h-24" },
 ]
 
 export default function Home() {
