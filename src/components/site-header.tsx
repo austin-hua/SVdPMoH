@@ -27,8 +27,8 @@ export function SiteHeader() {
           <Image
             src="/images/svdplogo.jpg"
             alt="SVdP Mother of Hope logo"
-            width={44}
-            height={44}
+            width={52}
+            height={52}
             className="rounded-full object-cover"
             priority
           />

@@ -31,8 +31,8 @@ export function SiteFooter() {
               <Image
                 src="/images/svdplogo.jpg"
                 alt=""
-                width={40}
-                height={40}
+                width={52}
+                height={52}
                 className="rounded-full object-cover opacity-90"
               />
               <div>
@@ -125,6 +125,17 @@ export function SiteFooter() {
 
         <div className="border-t border-white/10 mt-8 pt-6 text-center text-sm text-slate-500">
           <p>{t.footer.rights(new Date().getFullYear())}</p>
+          <p className="mt-2 text-xs text-slate-600">
+            Developed by:{" "}
+            <a
+              href="https://www.linkedin.com/in/austin-hua"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-slate-400 transition-colors duration-200"
+            >
+              Austin Hua
+            </a>
+          </p>
         </div>
       </div>
     </footer>
