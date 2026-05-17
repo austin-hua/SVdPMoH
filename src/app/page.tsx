@@ -122,7 +122,7 @@ export default function Home() {
       </section>
 
       {/* Parish Partnership */}
-      <section className="py-14 md:py-18">
+      <section className="pt-14 md:pt-18 pb-0">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-3">{h.parishTitle}</h2>
           <p className="text-muted-foreground text-center mb-10 whitespace-nowrap">
@@ -157,8 +157,32 @@ export default function Home() {
             ))}
           </div>
           <p className="text-center text-sm text-muted-foreground mt-6">
-            {h.inPartnershipWith(DIOCESE)}
+            {h.inPartnershipWith("")}
+            <a
+              href="https://www.arlingtondiocese.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline text-[#2B5EA7]"
+            >
+              {DIOCESE}
+            </a>
           </p>
+          <div className="flex justify-center mt-4">
+            <a
+              href="https://www.arlingtondiocese.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/images/arlington_temp.png"
+                alt="Catholic Diocese of Arlington logo"
+                width={0}
+                height={0}
+                sizes="160px"
+                className="h-24 w-auto object-contain hover:opacity-80 transition-opacity duration-200"
+              />
+            </a>
+          </div>
         </div>
       </section>
 
