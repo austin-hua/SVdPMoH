@@ -1,49 +1,34 @@
+"use client"
+
 import Link from "next/link"
-import type { Metadata } from "next"
 import { Users, Heart, HandHeart, BookOpen, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
-
-export const metadata: Metadata = {
-  title: "Volunteer",
-  description:
-    "Join the Society of St. Vincent de Paul Mother of Hope Conference. Learn how to become a Vincentian and see current volunteer opportunities in Falls Church, Virginia.",
-}
+import { useLanguage } from "@/components/language-provider"
 
 export default function Volunteer() {
+  const { t } = useLanguage()
+  const v = t.volunteer
+
   return (
     <div className="container mx-auto px-4 py-12 max-w-4xl">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-3">Volunteer &amp; Join</h1>
-        <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-          Answer the call to serve. The Society of St. Vincent de Paul welcomes all who wish to live the Gospel through direct, person-to-person service.
-        </p>
+        <h1 className="text-4xl font-bold mb-3">{v.title}</h1>
+        <p className="text-muted-foreground text-lg max-w-xl mx-auto">{v.subtitle}</p>
       </div>
 
       {/* How to Join */}
       <section className="mb-14">
         <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
           <Users className="h-5 w-5 text-[#2B5EA7]" />
-          How to Join the Society
+          {v.howToJoinTitle}
         </h2>
         <div className="grid sm:grid-cols-3 gap-5">
-          <StepCard
-            number="1"
-            title="Attend a Meeting"
-            desc="Come to one of our conference meetings to meet our members and learn about our work. Meetings are open to anyone interested in joining."
-          />
-          <StepCard
-            number="2"
-            title="Become a Probationer"
-            desc="New members begin a period of formation known as probation — typically lasting about a year — to learn the Vincentian charism and way of service."
-          />
-          <StepCard
-            number="3"
-            title="Take Your Active Membership"
-            desc="After your formation period, you are formally welcomed as an active member of the Society of St. Vincent de Paul."
-          />
+          <StepCard number="1" title={v.step1Title} desc={v.step1Desc} />
+          <StepCard number="2" title={v.step2Title} desc={v.step2Desc} />
+          <StepCard number="3" title={v.step3Title} desc={v.step3Desc} />
         </div>
         <div className="mt-6 bg-[#1C3D5A]/5 rounded-xl p-5 text-sm text-muted-foreground">
-          <strong className="text-foreground">Membership requirements:</strong> Members of the Society are expected to be practicing Catholics in good standing. We ask members to attend regular conference meetings, participate in home visits or other works of charity, and commit to ongoing spiritual formation.
+          <strong className="text-foreground">{v.membershipLabel}</strong> {v.membershipNote}
         </div>
       </section>
 
@@ -51,50 +36,28 @@ export default function Volunteer() {
       <section className="mb-14">
         <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
           <HandHeart className="h-5 w-5 text-[#2B5EA7]" />
-          Current Opportunities
+          {v.opportunitiesTitle}
         </h2>
         <div className="space-y-4">
-          <OpportunityCard
-            icon={<Heart className="h-5 w-5" />}
-            title="Home Visits"
-            desc="Our primary work: visit families in need in their homes to assess their situation and provide assistance with compassion and respect."
-          />
-          <OpportunityCard
-            icon={<HandHeart className="h-5 w-5" />}
-            title="Food Drives"
-            desc="Help organize and run food collection drives at our partner parishes to stock local food pantries."
-          />
-          <OpportunityCard
-            icon={<Users className="h-5 w-5" />}
-            title="Fundraising Events"
-            desc="Assist with planning and executing fundraising events that support our charitable works throughout the year."
-          />
-          <OpportunityCard
-            icon={<BookOpen className="h-5 w-5" />}
-            title="Conference Administration"
-            desc="Lend your skills to the administrative needs of our growing conference — communications, record-keeping, and coordination."
-          />
+          <OpportunityCard icon={<Heart className="h-5 w-5" />} title={v.opp1Title} desc={v.opp1Desc} />
+          <OpportunityCard icon={<HandHeart className="h-5 w-5" />} title={v.opp2Title} desc={v.opp2Desc} />
+          <OpportunityCard icon={<Users className="h-5 w-5" />} title={v.opp3Title} desc={v.opp3Desc} />
+          <OpportunityCard icon={<BookOpen className="h-5 w-5" />} title={v.opp4Title} desc={v.opp4Desc} />
         </div>
       </section>
 
-      {/* About Vincentian Spirituality */}
+      {/* Vincentian Spirit */}
       <section className="bg-[#1C3D5A] text-white rounded-xl p-8 mb-10">
-        <h2 className="text-xl font-semibold mb-3">The Vincentian Spirit</h2>
-        <p className="text-slate-300 leading-relaxed mb-3">
-          St. Vincent de Paul (1581–1660) devoted his life to serving the poor of France, founding the Congregation of the Mission and the Daughters of Charity. In 1833, Blessed Frédéric Ozanam and a small group of students in Paris founded the Society bearing his name, inspired by his example.
-        </p>
-        <p className="text-slate-300 leading-relaxed">
-          Today, the Society operates in more than 150 countries. As Vincentians, we are called not merely to give, but to encounter — to meet Christ in the face of those we serve.
-        </p>
+        <h2 className="text-xl font-semibold mb-3">{v.spiritTitle}</h2>
+        <p className="text-slate-300 leading-relaxed mb-3">{v.spiritDesc1}</p>
+        <p className="text-slate-300 leading-relaxed">{v.spiritDesc2}</p>
       </section>
 
       <div className="text-center">
-        <p className="text-muted-foreground mb-4">
-          Ready to learn more or attend your first meeting?
-        </p>
+        <p className="text-muted-foreground mb-4">{v.ctaText}</p>
         <Button asChild className="bg-[#1C3D5A] hover:bg-[#2B5EA7]">
           <Link href="/contact">
-            Get in Touch
+            {v.ctaBtn}
             <ChevronRight className="h-4 w-4 ml-1" />
           </Link>
         </Button>

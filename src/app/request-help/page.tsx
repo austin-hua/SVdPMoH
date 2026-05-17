@@ -1,19 +1,17 @@
-import type { Metadata } from "next"
+"use client"
 
-export const metadata: Metadata = {
-  title: "Request Assistance",
-  description:
-    "Request assistance from the SVdP Mother of Hope Conference in Falls Church, Virginia.",
-}
+import { useLanguage } from "@/components/language-provider"
+import { CONFERENCE_PHONE } from "@/lib/constants"
 
 export default function RequestHelp() {
+  const { t } = useLanguage()
+  const r = t.requestHelp
+
   return (
     <div className="container mx-auto px-4 py-12 max-w-3xl">
       <div className="text-center mb-10">
-        <h1 className="text-4xl font-bold mb-3">Request Assistance</h1>
-        <p className="text-muted-foreground text-lg max-w-xl mx-auto">
-          We are here to help. Please fill out the form below and we will follow up with you.
-        </p>
+        <h1 className="text-4xl font-bold mb-3">{r.title}</h1>
+        <p className="text-muted-foreground text-lg max-w-xl mx-auto">{r.subtitle}</p>
       </div>
 
       <div className="rounded-xl overflow-hidden border">
@@ -31,10 +29,14 @@ export default function RequestHelp() {
       </div>
 
       <p className="text-center text-sm text-muted-foreground mt-6">
-        For urgent needs or questions, please call us directly at{" "}
-        <a href="tel:7031111111" className="text-[#2B5EA7] underline hover:text-[#1C3D5A]">
-          703-111-1111
-        </a>.
+        {r.urgentNote}{" "}
+        <a
+          href={`tel:${CONFERENCE_PHONE.replace(/[^\d]/g, "")}`}
+          className="text-[#2B5EA7] underline hover:text-[#1C3D5A]"
+        >
+          {CONFERENCE_PHONE}
+        </a>
+        .
       </p>
     </div>
   )

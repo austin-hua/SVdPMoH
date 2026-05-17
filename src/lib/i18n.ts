@@ -251,7 +251,7 @@ export const translations = {
       about: "Sobre SVdP",
       spiritualGrowth: "Crecimiento Espiritual",
       rights: (year: number) =>
-        `© ${year} Sociedad de San Vicente de Paúl – Conferencia Madre de Esperanza. Todos los derechos reservados.`,
+        `© ${year} Society of St. Vincent de Paul – Mother of Hope Conference. Todos los derechos reservados.`,
     },
     home: {
       heroLocation: "Falls Church, Virginia",
