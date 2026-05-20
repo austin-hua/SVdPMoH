@@ -17,7 +17,7 @@ import { DIOCESE, CONFERENCE_PHONE } from "@/lib/constants"
 import { useLanguage } from "@/components/language-provider"
 
 const PARISH_LINKS = [
-  { name: "St. James Catholic Church", url: "https://stjamescatholic.org/", logo: "/images/james_temp.png", logoSize: "max-h-24" },
+  { name: "St. James Catholic Church", url: "https://stjamescatholic.org/", logo: "/images/st_james.png", logoSize: "max-h-24" },
   { name: "St. Anthony of Padua Catholic Church", url: "https://www.stanthonyparish.org/", logo: "/images/anthony_temp.png", logoSize: "max-h-24" },
   { name: "St. Philip Catholic Church", url: "https://www.stphilipfc.org/", logo: "/images/philip_temp.png", logoSize: "max-h-24" },
 ]
@@ -155,33 +155,6 @@ export default function Home() {
                 </span>
               </a>
             ))}
-          </div>
-          <p className="text-center text-sm text-muted-foreground mt-6">
-            {h.inPartnershipWith("")}
-            <a
-              href="https://www.arlingtondiocese.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:underline text-[#2B5EA7]"
-            >
-              {DIOCESE}
-            </a>
-          </p>
-          <div className="flex justify-center mt-4">
-            <a
-              href="https://www.arlingtondiocese.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                src="/images/arlington_temp.png"
-                alt="Catholic Diocese of Arlington logo"
-                width={0}
-                height={0}
-                sizes="160px"
-                className="h-24 w-auto object-contain hover:opacity-80 transition-opacity duration-200"
-              />
-            </a>
           </div>
         </div>
       </section>

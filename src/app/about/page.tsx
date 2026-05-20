@@ -111,7 +111,7 @@ export default function About() {
           >
             <div className="shrink-0 flex items-center justify-center w-16 h-16">
               <Image
-                src="/images/svdp_temp.png"
+                src="/images/svdp-usa.png"
                 alt="SVdP USA logo"
                 width={0}
                 height={0}
@@ -132,7 +132,7 @@ export default function About() {
           >
             <div className="shrink-0 flex items-center justify-center w-16 h-16">
               <Image
-                src="/images/svdp_temp.png"
+                src="/images/svdp-usa.png"
                 alt="SVdP Arlington Council logo"
                 width={0}
                 height={0}
