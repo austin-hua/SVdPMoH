@@ -46,6 +46,9 @@
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
 
+  /* ── Fonts ── */
+  --font-serif: var(--font-playfair);
+
   /* ── SVdP Brand Colors ── */
   --color-svdp-navy: #1C3D5A;
   --color-svdp-blue: #2B5EA7;
@@ -128,6 +131,9 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  h1, h2, h3 {
+    font-family: var(--font-serif);
   }
 }
 
