@@ -40,7 +40,7 @@ export default function Home() {
             className="mx-auto mb-6 rounded-full object-cover drop-shadow-lg animate-scale-in"
             priority
           />
-          <p className="text-[#5BA3D9]/80 text-sm font-medium tracking-widest uppercase mb-4 animate-fade-in-up">
+          <p className="text-white text-sm font-medium tracking-widest uppercase mb-4 animate-fade-in-up">
             {h.heroLocation}
           </p>
           <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight animate-fade-in-up delay-100">
