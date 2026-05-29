@@ -114,9 +114,10 @@ export default function Donate() {
         <p className="text-sm text-muted-foreground mb-3">{d.qcdDesc}</p>
         <div className="bg-secondary rounded-lg p-4 space-y-0.5 mb-3">
           <p className="text-sm font-medium">SVDP Mother of Hope Conference</p>
+          <p className="text-sm">{d.qcdAttn}</p>
           <p className="text-sm">905 Park Avenue</p>
           <p className="text-sm">Falls Church, VA 22046</p>
-          <p className="text-sm">{d.qcdAttn}</p>
+          <InfoRow label="Tax ID:" value="42-1937873" />
         </div>
         <p className="text-sm text-muted-foreground">{d.qcdNote}</p>
       </SectionCard>
