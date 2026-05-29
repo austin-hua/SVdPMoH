@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { Banknote, HeartHandshake, TrendingUp, Landmark, Heart } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { CONFERENCE_PHONE, CONFERENCE_EMAIL } from "@/lib/constants"
 import { useLanguage } from "@/components/language-provider"
 
 function InfoRow({ label, value }: { label: string; value: string }) {
@@ -102,8 +103,8 @@ export default function Donate() {
           <p className="text-sm">905 Park Avenue</p>
           <p className="text-sm">Falls Church, VA 22046</p>
           <InfoRow label="Tax ID:" value="42-1937873" />
-          <p className="text-sm text-muted-foreground">Phone Number</p>
-          <p className="text-sm text-muted-foreground">Email Address</p>
+          <InfoRow label="Phone:" value={CONFERENCE_PHONE} />
+          <InfoRow label="Email:" value={CONFERENCE_EMAIL} />
         </div>
         <p className="text-sm text-muted-foreground">{d.dafNote}</p>
       </SectionCard>
