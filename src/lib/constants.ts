@@ -10,7 +10,7 @@ export const PARISHES = [
 ] as const
 
 export const CONFERENCE_PHONE = "703-884-8112"
-export const CONFERENCE_EMAIL = "temporary@svdpmotherofhope.org"
+export const CONFERENCE_EMAIL = "contact@svdpmotherofhope.org"
 export const CONFERENCE_ADDRESS_LINE1 = "905 Park Avenue"
 export const CONFERENCE_ADDRESS_CITY = "Falls Church, Virginia 22046"
 export const CONFERENCE_FULL_ADDRESS = "905 Park Avenue, Falls Church, Virginia 22046"
