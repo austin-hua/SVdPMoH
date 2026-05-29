@@ -23,6 +23,7 @@ export default function About() {
             <Image
               src="/images/stvincent.jpeg"
               alt="St. Vincent de Paul"
+              title="Portrait of St. Vincent de Paul by Simon François de Tours (17th c.), public domain"
               width={0}
               height={0}
               sizes="200px"
