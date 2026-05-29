@@ -211,12 +211,12 @@ export default function Home() {
                 desc={h.qlAboutDesc}
                 href="/about"
               />
-              <QuickLink
+              {/* <QuickLink
                 icon={<Flower2 className="w-5 h-5" />}
                 title={h.qlSpiritualGrowth}
                 desc={h.qlSpiritualGrowthDesc}
                 href="/spiritual-growth"
-              />
+              /> */}
             </div>
           </div>
         </div>

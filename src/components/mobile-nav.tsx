@@ -15,7 +15,7 @@ export function MobileNav() {
     { href: "/donate", label: t.nav.donate },
     { href: "/volunteer", label: t.nav.volunteer },
     { href: "/about", label: t.nav.about },
-    { href: "/spiritual-growth", label: t.nav.spiritualGrowth },
+    // { href: "/spiritual-growth", label: t.nav.spiritualGrowth },
   ]
 
   return (

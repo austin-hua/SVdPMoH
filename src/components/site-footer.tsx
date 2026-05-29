@@ -113,12 +113,12 @@ export function SiteFooter() {
               >
                 {t.footer.about}
               </Link>
-              <Link
+              {/* <Link
                 href="/spiritual-growth"
                 className="text-slate-400 hover:text-white transition-colors duration-200"
               >
                 {t.footer.spiritualGrowth}
-              </Link>
+              </Link> */}
             </nav>
           </div>
         </div>
