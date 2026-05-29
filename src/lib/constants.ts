@@ -9,7 +9,7 @@ export const PARISHES = [
   "St. Philip Catholic Church",
 ] as const
 
-export const CONFERENCE_PHONE = "703-111-1111"
+export const CONFERENCE_PHONE = "703-884-8112"
 export const CONFERENCE_EMAIL = "temporary@svdpmotherofhope.org"
 export const CONFERENCE_ADDRESS_LINE1 = "905 Park Avenue"
 export const CONFERENCE_ADDRESS_CITY = "Falls Church, Virginia 22046"
