@@ -123,7 +123,9 @@ export default function Donate() {
       {/* Why Give */}
       <section className="bg-[#1C3D5A]/5 rounded-xl p-8 mb-8 mt-6">
         <h2 className="text-xl font-semibold mb-3 text-[#1C3D5A]">{d.whyTitle}</h2>
-        <p className="text-sm text-foreground/80 leading-relaxed mb-3">{d.whyDesc1}</p>
+        <p className="text-sm text-foreground/80 leading-relaxed mb-3">
+          <strong>{d.whyDesc1}</strong>{" "}{d.whyDesc1b}
+        </p>
         <p className="text-sm text-foreground/80 leading-relaxed">{d.whyDesc2}</p>
       </section>
 

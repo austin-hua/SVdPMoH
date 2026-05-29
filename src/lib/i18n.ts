@@ -145,7 +145,9 @@ export const translations = {
         "Please contact us before dropping off large items so we can coordinate pickup or drop-off logistics.",
       whyTitle: "Why Your Gift Matters",
       whyDesc1:
-        "One hundred percent of your donation to the Mother of Hope Conference goes directly to serving families in need in the Falls Church area. Your generosity allows us to provide emergency financial assistance, connect neighbors with essential resources, and carry out the Vincentian mission of charity.",
+        "100% of your donation to the Mother of Hope Conference goes directly to serving families in need in the Falls Church area.",
+      whyDesc1b:
+        "Your generosity allows us to provide emergency financial assistance, connect neighbors with essential resources, and carry out the Vincentian mission of charity.",
       whyDesc2:
         "The Society of St. Vincent de Paul is a 501(c)(3) nonprofit organization (pending). Your donation may be tax-deductible.",
       questionsAbout: "Questions about donating?",
@@ -392,7 +394,9 @@ export const translations = {
         "Por favor contáctenos antes de traer artículos grandes para coordinar la logística de recogida o entrega.",
       whyTitle: "Por Qué Su Donación Importa",
       whyDesc1:
-        "El cien por ciento de su donación a la Conferencia Madre de Esperanza va directamente a servir a las familias necesitadas en la área de Falls Church. Su generosidad nos permite brindar asistencia financiera de emergencia, conectar a los vecinos con recursos esenciales y llevar a cabo la misión vicentina de caridad.",
+        "El 100% de su donación a la Conferencia Madre de Esperanza va directamente a servir a las familias necesitadas en la área de Falls Church.",
+      whyDesc1b:
+        "Su generosidad nos permite brindar asistencia financiera de emergencia, conectar a los vecinos con recursos esenciales y llevar a cabo la misión vicentina de caridad.",
       whyDesc2:
         "La Sociedad de San Vicente de Paúl es una organización sin fines de lucro 501(c)(3) (pendiente). Su donación puede ser deducible de impuestos.",
       questionsAbout: "¿Preguntas sobre cómo donar?",
