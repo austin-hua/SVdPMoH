@@ -214,7 +214,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Latest News */}
+      {/* Latest News — temporarily hidden
       <section className="py-14 md:py-18 bg-secondary">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-3xl font-bold mb-3">{h.newsTitle}</h2>
@@ -228,6 +228,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      */}
 
       {/* CTA */}
       <section className="py-14 md:py-18 bg-[#1C3D5A] text-white">
