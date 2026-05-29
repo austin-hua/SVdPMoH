@@ -183,8 +183,8 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-3">{h.howWeServeTitle}</h2>
           <p className="text-muted-foreground text-center mb-10">{h.howWeServeDesc}</p>
-          <div className="max-w-5xl mx-auto space-y-5">
-            <div className="grid sm:grid-cols-3 gap-5">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
               <QuickLink
                 icon={<HandHeart className="w-5 h-5" />}
                 title={h.qlRequestHelp}
@@ -203,20 +203,12 @@ export default function Home() {
                 desc={h.qlVolunteerDesc}
                 href="/volunteer"
               />
-            </div>
-            <div className="grid sm:grid-cols-2 gap-5 max-w-2xl mx-auto">
               <QuickLink
                 icon={<BookOpen className="w-5 h-5" />}
                 title={h.qlAbout}
                 desc={h.qlAboutDesc}
                 href="/about"
               />
-              {/* <QuickLink
-                icon={<Flower2 className="w-5 h-5" />}
-                title={h.qlSpiritualGrowth}
-                desc={h.qlSpiritualGrowthDesc}
-                href="/spiritual-growth"
-              /> */}
             </div>
           </div>
         </div>
@@ -282,7 +274,7 @@ function QuickLink({
   return (
     <Link
       href={href}
-      className="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 border border-border block"
+      className="group bg-white p-4 rounded-xl shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 border border-border block"
     >
       <div className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-[#1C3D5A]/5 text-[#2B5EA7] mb-4 group-hover:bg-[#1C3D5A]/10 transition-colors duration-200">
         {icon}
