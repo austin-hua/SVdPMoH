@@ -16,37 +16,6 @@ export default function About() {
         <p className="text-muted-foreground text-lg max-w-xl mx-auto">{a.subtitle}</p>
       </div>
 
-      {/* History of the Society */}
-      <section className="mb-14">
-        <h2 className="text-2xl font-semibold mb-5 flex items-center gap-2">
-          <BookOpen className="h-5 w-5 text-[#2B5EA7]" />
-          {a.historyTitle}
-        </h2>
-        <div className="space-y-4 text-foreground/80 leading-relaxed mb-8">
-          <p>
-            <strong>Blessed Frédéric Ozanam</strong> {a.history1.replace("Blessed Frédéric Ozanam", "").replace(/^\s*\(/, "(")}
-          </p>
-        </div>
-        <div className="max-w-xl mx-auto rounded-2xl overflow-hidden shadow-md mb-8">
-          <Image
-            src="/images/frederic.png"
-            alt="Blessed Frédéric Ozanam"
-            width={0}
-            height={0}
-            sizes="100vw"
-            className="w-full h-auto"
-          />
-        </div>
-        <div className="space-y-4 text-foreground/80 leading-relaxed">
-          <p>{a.history2}</p>
-          <p>
-            {a.history3.split("Society of St. Vincent de Paul USA")[0]}
-            <strong>Society of St. Vincent de Paul USA</strong>
-            {a.history3.split("Society of St. Vincent de Paul USA")[1]}
-          </p>
-        </div>
-      </section>
-
       {/* The Vincentian Mission */}
       <section className="mb-14 bg-[#1C3D5A]/5 rounded-xl p-8">
         <div className="flex flex-col sm:flex-row gap-8 items-center">
@@ -72,32 +41,8 @@ export default function About() {
         </div>
       </section>
 
-      {/* Our Local Conference */}
-      <section className="mb-14">
-        <h2 className="text-2xl font-semibold mb-5 flex items-center gap-2">
-          <Church className="h-5 w-5 text-[#2B5EA7]" />
-          {a.localConferenceTitle}
-        </h2>
-        <div className="space-y-4 text-foreground/80 leading-relaxed">
-          <p>
-            <strong>Mother of Hope Conference</strong>{" "}
-            {a.localConference1(DIOCESE).replace("The Mother of Hope Conference", "").replace("La Conferencia Madre de Esperanza", "")}
-          </p>
-          <p>{a.localConference2}</p>
-          <ul className="list-none space-y-2 pl-4">
-            {PARISHES.map((p) => (
-              <li key={p} className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#2B5EA7] shrink-0" />
-                {p}
-              </li>
-            ))}
-          </ul>
-          <p>{a.localConference3}</p>
-        </div>
-      </section>
-
       {/* National & Council Links */}
-      <section>
+      <section className="mb-14">
         <h2 className="text-2xl font-semibold mb-5 flex items-center gap-2">
           <Globe className="h-5 w-5 text-[#2B5EA7]" />
           {a.learnMoreTitle}
@@ -145,6 +90,61 @@ export default function About() {
               <p className="text-sm text-muted-foreground">{a.svdpCouncilDesc}</p>
             </div>
           </a>
+        </div>
+      </section>
+
+      {/* Our Local Conference */}
+      <section className="mb-14">
+        <h2 className="text-2xl font-semibold mb-5 flex items-center gap-2">
+          <Church className="h-5 w-5 text-[#2B5EA7]" />
+          {a.localConferenceTitle}
+        </h2>
+        <div className="space-y-4 text-foreground/80 leading-relaxed">
+          <p>
+            <strong>Mother of Hope Conference</strong>{" "}
+            {a.localConference1(DIOCESE).replace("The Mother of Hope Conference", "").replace("La Conferencia Madre de Esperanza", "")}
+          </p>
+          <p>{a.localConference2}</p>
+          <ul className="list-none space-y-2 pl-4">
+            {PARISHES.map((p) => (
+              <li key={p} className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-[#2B5EA7] shrink-0" />
+                {p}
+              </li>
+            ))}
+          </ul>
+          <p>{a.localConference3}</p>
+        </div>
+      </section>
+
+      {/* History of the Society */}
+      <section className="mb-14">
+        <h2 className="text-2xl font-semibold mb-5 flex items-center gap-2">
+          <BookOpen className="h-5 w-5 text-[#2B5EA7]" />
+          {a.historyTitle}
+        </h2>
+        <div className="space-y-4 text-foreground/80 leading-relaxed mb-8">
+          <p>
+            <strong>Blessed Frédéric Ozanam</strong> {a.history1.replace("Blessed Frédéric Ozanam", "").replace(/^\s*\(/, "(")}
+          </p>
+        </div>
+        <div className="max-w-xl mx-auto rounded-2xl overflow-hidden shadow-md mb-8">
+          <Image
+            src="/images/frederic.png"
+            alt="Blessed Frédéric Ozanam"
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="w-full h-auto"
+          />
+        </div>
+        <div className="space-y-4 text-foreground/80 leading-relaxed">
+          <p>{a.history2}</p>
+          <p>
+            {a.history3.split("Society of St. Vincent de Paul USA")[0]}
+            <strong>Society of St. Vincent de Paul USA</strong>
+            {a.history3.split("Society of St. Vincent de Paul USA")[1]}
+          </p>
         </div>
       </section>
     </div>
