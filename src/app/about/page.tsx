@@ -21,7 +21,7 @@ export default function About() {
         <div className="flex flex-col sm:flex-row gap-8 items-center">
           <div className="rounded-xl overflow-hidden shadow-md shrink-0 sm:w-48">
             <Image
-              src="/images/saintvincent.png"
+              src="/images/stvincent.jpeg"
               alt="St. Vincent de Paul"
               width={0}
               height={0}
