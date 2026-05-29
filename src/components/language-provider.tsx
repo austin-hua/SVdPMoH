@@ -20,17 +20,17 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const saved = localStorage.getItem("lang")
-    if (saved === "zh") {
-      setLocale("zh")
-      document.documentElement.lang = "zh-TW"
+    if (saved === "es") {
+      setLocale("es")
+      document.documentElement.lang = "es"
     }
   }, [])
 
   function toggle() {
-    const next: Locale = locale === "en" ? "zh" : "en"
+    const next: Locale = locale === "en" ? "es" : "en"
     setLocale(next)
     localStorage.setItem("lang", next)
-    document.documentElement.lang = next === "zh" ? "zh-TW" : "en"
+    document.documentElement.lang = next
   }
 
   return (

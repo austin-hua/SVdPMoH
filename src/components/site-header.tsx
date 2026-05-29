@@ -66,7 +66,7 @@ function LanguageToggle({ locale, toggle }: { locale: "en" | "es"; toggle: () =>
   return (
     <button
       onClick={toggle}
-      aria-label={locale === "en" ? "Switch to Traditional Chinese" : "Switch to English"}
+      aria-label={locale === "en" ? "Switch to Spanish" : "Switch to English"}
       className="flex items-center gap-0.5 text-xs font-semibold border border-border rounded-md overflow-hidden hover:border-[#1C3D5A] transition-colors duration-200"
     >
       <span
@@ -80,12 +80,12 @@ function LanguageToggle({ locale, toggle }: { locale: "en" | "es"; toggle: () =>
       </span>
       <span
         className={`px-2.5 py-1 transition-colors duration-200 ${
-          locale === "zh"
+          locale === "es"
             ? "bg-[#1C3D5A] text-white"
             : "text-muted-foreground hover:text-[#1C3D5A]"
         }`}
       >
-        繁體中文
+        Español
       </span>
     </button>
   )
