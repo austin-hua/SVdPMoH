@@ -71,9 +71,9 @@ export default function Donate() {
         <p className="text-sm text-muted-foreground mb-3">{d.checkDesc}</p>
         <address className="text-sm not-italic space-y-0.5">
           <p className="font-medium">SVDP Mother of Hope Conference</p>
+          <p>{d.checkAttn}</p>
           <p>905 Park Avenue</p>
           <p>Falls Church, VA 22046</p>
-          <p>{d.checkAttn}</p>
         </address>
       </SectionCard>
 
