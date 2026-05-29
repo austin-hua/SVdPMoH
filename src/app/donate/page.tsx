@@ -70,7 +70,7 @@ export default function Donate() {
       <SectionCard icon={<Banknote className="h-5 w-5" />} title={d.checkTitle}>
         <p className="text-sm text-muted-foreground mb-3">{d.checkDesc}</p>
         <address className="text-sm not-italic space-y-0.5">
-          <p className="font-medium">St. James Catholic Church</p>
+          <p className="font-medium">SVDP Mother of Hope Conference</p>
           <p>905 Park Avenue</p>
           <p>Falls Church, VA 22046</p>
           <p>{d.checkAttn}</p>
