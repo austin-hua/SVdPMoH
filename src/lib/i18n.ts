@@ -109,8 +109,7 @@ export const translations = {
       quoteRef: "— Luke 6:38",
       financialTitle: "Financial Giving",
       onlineTitle: "Donate Online",
-      onlineDesc:
-        "Online giving is coming soon. In the meantime, please consider mailing a check or giving in person through your parish. We appreciate your patience as we get set up.",
+      onlineDesc: "Give online through your parish's giving portal:",
       checkTitle: "Donate by Check",
       checkDesc: "Please make checks payable to SVDP Mother of Hope Conference and mail to:",
       checkAttn: "ATTN: Treasurer, SVDP Mother of Hope Conference",
@@ -358,8 +357,7 @@ export const translations = {
       quoteRef: "— Lucas 6:38",
       financialTitle: "Donaciones Financieras",
       onlineTitle: "Donar en Línea",
-      onlineDesc:
-        "Las donaciones en línea estarán disponibles pronto. Mientras tanto, considere enviar un cheque por correo o donar en persona a través de su parroquia. Agradecemos su paciencia mientras nos organizamos.",
+      onlineDesc: "Done en línea a través del portal de donaciones de su parroquia:",
       checkTitle: "Donar con Cheque",
       checkDesc: "Por favor haga los cheques a nombre de SVDP Mother of Hope Conference y envíelos por correo a:",
       checkAttn: "ATTN: Treasurer, SVDP Mother of Hope Conference",

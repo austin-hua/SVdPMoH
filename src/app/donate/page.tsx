@@ -63,7 +63,32 @@ export default function Donate() {
 
       {/* Donate Online */}
       <SectionCard icon={<HeartHandshake className="h-5 w-5" />} title={d.onlineTitle} dashed>
-        <p className="text-sm text-muted-foreground">{d.onlineDesc}</p>
+        <p className="text-sm text-muted-foreground mb-4">{d.onlineDesc}</p>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <a
+            href="https://www.parishgiving.org/payment;id=7F15039F62EF669193FC02745B3D5D6B8A01F87C08CC09E4"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 flex items-center justify-center gap-2 rounded-lg border border-[#2B5EA7] text-[#2B5EA7] hover:bg-[#2B5EA7] hover:text-white transition-colors duration-200 px-4 py-2.5 text-sm font-medium"
+          >
+            <HeartHandshake className="h-4 w-4 shrink-0" />
+            St. James
+          </a>
+          <a
+            href="https://giving.parishsoft.com/App/Form/c1924ee5-57e7-4559-8548-979b83cd2bdc"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 flex items-center justify-center gap-2 rounded-lg border border-[#2B5EA7] text-[#2B5EA7] hover:bg-[#2B5EA7] hover:text-white transition-colors duration-200 px-4 py-2.5 text-sm font-medium"
+          >
+            <HeartHandshake className="h-4 w-4 shrink-0" />
+            St. Anthony
+          </a>
+          <div className="flex-1 flex items-center justify-center gap-2 rounded-lg border border-border text-muted-foreground px-4 py-2.5 text-sm font-medium cursor-not-allowed">
+            <HeartHandshake className="h-4 w-4 shrink-0" />
+            St. Philip
+            <span className="text-xs bg-muted rounded px-1.5 py-0.5">coming soon</span>
+          </div>
+        </div>
       </SectionCard>
 
       {/* Donate by Check */}
