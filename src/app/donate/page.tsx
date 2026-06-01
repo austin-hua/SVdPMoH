@@ -85,8 +85,8 @@ export default function Donate() {
           </a>
           <div className="flex-1 flex items-center justify-center gap-2 rounded-lg border border-border text-muted-foreground px-4 py-2.5 text-sm font-medium cursor-not-allowed">
             <HeartHandshake className="h-4 w-4 shrink-0" />
-            St. Philip
-            <span className="text-xs bg-muted rounded px-1.5 py-0.5">coming soon</span>
+            <span className="whitespace-nowrap">St. Philip</span>
+            <span className="text-xs bg-muted rounded px-1.5 py-0.5 whitespace-nowrap">coming soon</span>
           </div>
         </div>
       </SectionCard>
