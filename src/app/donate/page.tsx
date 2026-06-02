@@ -87,7 +87,7 @@ export default function Donate() {
               St. Anthony
             </a>
             <p className="text-xs text-muted-foreground mt-1.5 text-center">
-              Select <span className="font-medium text-foreground">SVDP Mother of Hope – 2871</span> from the dropdown
+              For St. Anthony: select <span className="font-medium text-foreground">SVDP Mother of Hope – 2871</span> from the designation dropdown
             </p>
           </div>
           <div className="flex-1">
