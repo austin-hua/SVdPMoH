@@ -66,7 +66,7 @@ export default function Donate() {
         <p className="text-sm text-muted-foreground mb-4">{d.onlineDesc}</p>
         <div className="flex flex-col sm:flex-row gap-3">
           <a
-            href="https://www.parishgiving.org/payment;id=7F15039F62EF669193FC02745B3D5D6B8A01F87C08CC09E4"
+            href="https://giving.myparishsoft.io/App/Form/45f89023-a888-41fa-809a-ef738144b98a"
             target="_blank"
             rel="noopener noreferrer"
             className="flex-1 flex items-center justify-center gap-2 rounded-lg border border-[#2B5EA7] text-[#2B5EA7] hover:bg-[#2B5EA7] hover:text-white transition-colors duration-200 px-4 py-2.5 text-sm font-medium"
