@@ -65,28 +65,37 @@ export default function Donate() {
       <SectionCard icon={<HeartHandshake className="h-5 w-5" />} title={d.onlineTitle} dashed>
         <p className="text-sm text-muted-foreground mb-4">{d.onlineDesc}</p>
         <div className="flex flex-col sm:flex-row gap-3">
-          <a
-            href="https://giving.myparishsoft.io/App/Form/45f89023-a888-41fa-809a-ef738144b98a"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 flex items-center justify-center gap-2 rounded-lg border border-[#2B5EA7] text-[#2B5EA7] hover:bg-[#2B5EA7] hover:text-white transition-colors duration-200 px-4 py-2.5 text-sm font-medium"
-          >
-            <HeartHandshake className="h-4 w-4 shrink-0" />
-            St. James
-          </a>
-          <a
-            href="https://giving.parishsoft.com/App/Form/c1924ee5-57e7-4559-8548-979b83cd2bdc"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 flex items-center justify-center gap-2 rounded-lg border border-[#2B5EA7] text-[#2B5EA7] hover:bg-[#2B5EA7] hover:text-white transition-colors duration-200 px-4 py-2.5 text-sm font-medium"
-          >
-            <HeartHandshake className="h-4 w-4 shrink-0" />
-            St. Anthony
-          </a>
-          <div className="flex-1 flex items-center justify-center gap-2 rounded-lg border border-border text-muted-foreground px-4 py-2.5 text-sm font-medium cursor-not-allowed">
-            <HeartHandshake className="h-4 w-4 shrink-0" />
-            <span className="whitespace-nowrap">St. Philip</span>
-            <span className="text-xs bg-muted rounded px-1.5 py-0.5 whitespace-nowrap">coming soon</span>
+          <div className="flex-1">
+            <a
+              href="https://giving.myparishsoft.io/App/Form/45f89023-a888-41fa-809a-ef738144b98a"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full flex items-center justify-center gap-2 rounded-lg border border-[#2B5EA7] text-[#2B5EA7] hover:bg-[#2B5EA7] hover:text-white transition-colors duration-200 px-4 py-2.5 text-sm font-medium"
+            >
+              <HeartHandshake className="h-4 w-4 shrink-0" />
+              St. James
+            </a>
+          </div>
+          <div className="flex-1">
+            <a
+              href="https://giving.parishsoft.com/App/Form/c1924ee5-57e7-4559-8548-979b83cd2bdc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full flex items-center justify-center gap-2 rounded-lg border border-[#2B5EA7] text-[#2B5EA7] hover:bg-[#2B5EA7] hover:text-white transition-colors duration-200 px-4 py-2.5 text-sm font-medium"
+            >
+              <HeartHandshake className="h-4 w-4 shrink-0" />
+              St. Anthony
+            </a>
+            <p className="text-xs text-muted-foreground mt-1.5 text-center">
+              Select <span className="font-medium text-foreground">SVDP Mother of Hope – 2871</span> from the dropdown
+            </p>
+          </div>
+          <div className="flex-1">
+            <div className="w-full flex items-center justify-center gap-2 rounded-lg border border-border text-muted-foreground px-4 py-2.5 text-sm font-medium cursor-not-allowed">
+              <HeartHandshake className="h-4 w-4 shrink-0" />
+              <span className="whitespace-nowrap">St. Philip</span>
+              <span className="text-xs bg-muted rounded px-1.5 py-0.5 whitespace-nowrap">coming soon</span>
+            </div>
           </div>
         </div>
       </SectionCard>
