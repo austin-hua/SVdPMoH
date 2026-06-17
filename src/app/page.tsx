@@ -2,6 +2,9 @@
 
 import Link from "next/link"
 import Image from "next/image"
+import dynamic from "next/dynamic"
+
+const ServiceAreaMap = dynamic(() => import("@/components/service-area-map"), { ssr: false })
 import { Button } from "@/components/ui/button"
 import {
   HandHeart,
@@ -165,15 +168,7 @@ export default function Home() {
           <h2 className="text-3xl font-bold mb-3">{h.mapTitle}</h2>
           <p className="text-muted-foreground mb-8">{h.mapDesc}</p>
           <div className="rounded-xl overflow-hidden shadow-md border border-border">
-            <iframe
-              title="Falls Church, Virginia map"
-              src="https://maps.google.com/maps?q=Falls+Church,+Virginia&output=embed&hl=en&z=13"
-              width="100%"
-              height="400"
-              style={{ border: 0, display: "block" }}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
+            <ServiceAreaMap />
           </div>
         </div>
       </section>
