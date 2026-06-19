@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { Banknote, HeartHandshake, TrendingUp, Landmark, Heart } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { CONFERENCE_PHONE, CONFERENCE_EMAIL } from "@/lib/constants"
+import { CONFERENCE_PHONE, CONFERENCE_EMAIL, TREASURER_EMAIL } from "@/lib/constants"
 import { useLanguage } from "@/components/language-provider"
 
 function InfoRow({ label, value }: { label: string; value: string }) {
@@ -127,6 +127,13 @@ export default function Donate() {
           <p>PO Box 770001</p>
           <p>Cincinnati, OH 45277-0036</p>
         </address>
+        <p className="text-sm text-muted-foreground mt-3">
+          Please notify our treasurer at{" "}
+          <a href={`mailto:${TREASURER_EMAIL}`} className="font-medium text-[#1C3D5A] hover:underline">
+            {TREASURER_EMAIL}
+          </a>{" "}
+          once the transfer is initiated.
+        </p>
       </SectionCard>
 
       {/* Donate from a DAF */}
@@ -138,7 +145,7 @@ export default function Donate() {
           <p className="text-sm">Falls Church, VA 22046</p>
           <InfoRow label="Tax ID:" value="42-1937873" />
           <InfoRow label="Phone:" value={CONFERENCE_PHONE} />
-          <InfoRow label="Email:" value={CONFERENCE_EMAIL} />
+          <InfoRow label="Email:" value={TREASURER_EMAIL} />
         </div>
         <p className="text-sm text-muted-foreground">{d.dafNote}</p>
       </SectionCard>
